@@ -1,0 +1,113 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    /* animation: fade .3s ease 1; */
+}
+body{
+    background-position: center;
+    background-size: cover;
+    overflow-x: hidden;
+    animation: fade .4s ease 1;
+    background-repeat: no-repeat;
+}
+
+
+.level{
+    padding-left: 5%;
+    padding-top: 10%;
+    font-family: poopins;
+    width: 90%;
+    font-weight: bold;
+    font-size: clamp(20px,5vw,48px);
+    height: 5rem;
+}
+
+.progress{
+    width: 40%;
+    height: 3rem;
+    margin-top: 3%;
+    box-shadow: 0px 0px 10px silver;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+}
+
+
+.sub2{
+    width: 40%;
+    z-index: 1000;
+    height: 3rem;
+    border-radius: 5px;
+    background-color: rgb(30, 255, 0);
+}
+
+@font-face {
+    font-family: ip;
+    src: url(../Text/font/Ios\ Kohinoor\ font.ttf);
+}
+
+
+@font-face {
+    font-family: poopins;
+    src: url(../Text/font/Poppins-Regular.ttf);
+}
+
+
+.kothai{
+    width:65%;
+    display: flex;
+    color: rgb(255, 255, 255);
+    font-family: poopins;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    padding: 5%;
+    box-shadow: 0px 0px 20px rgb(212, 210, 210);
+    margin-top: 5%;
+    margin-left: 10%;
+    border-radius: 5px;
+    height: 1rem;
+    background-color:rgb(0, 0, 0);
+}
+
+.dot{
+    z-index: 1000;
+    width: 6px;
+    margin-right: 5%;
+    height: 6px;
+    background-color: red;
+    border-radius: 50px;
+}
+button{
+    background-color: white;
+    border: none;
+    font-size: 1.2rem;
+    margin-left: 5%;
+    margin-top: 5%;
+}
+
+
+
+p{
+    width: 80%;
+    align-self: center;
+    margin-left: 5%;
+    box-shadow: 0px 0px 10px silver;
+    background-color: rgb(255, 255, 255);
+    height: auto;
+    margin-top: 5%;
+border-radius: 10px;
+    font-family: ip;
+    padding: 20px;
+}
+
+
+@keyframes fade {
+    from{
+   opacity: 0;
+    }
+    to{
+      opacity: 1;
+    }
+  }
