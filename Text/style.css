@@ -2,15 +2,16 @@
   margin: 0;
   padding: 0;
   user-select: none;
+  scrollbar-width: none;
 }
-button{
+/* button{
 border: none;
 background-color: black;
 font-size: 1.2rem;
 margin-left: -15%;
 color: white;
 
-}
+} */
 p{
   font-family: op;
   width: 100%;
@@ -33,7 +34,9 @@ display: flex;
   align-items: center;
   font-size: .9rem;
 }
-
+body{
+  scrollbar-width: none;
+}
 .sub-edu{
   font-family: op;
   font-weight: normal;
@@ -83,19 +86,13 @@ display: flex;
   height: 14rem;
   /* background-color: black; */
 }
-.logo{
-  width: 100%;
-  height: auto;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-}
+
 
 
 .Education{
   width: 100%;
   display: flex;
-  margin-top: 95%;
+  margin-top: 65%;
   justify-content: center;
   font-family: op;
   /* margin-bottom: 10%; */
@@ -306,19 +303,7 @@ font-size: .9rem;
   height: 4rem;
 }
 
-.logo{
-  width: 60px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 60px;
-  z-index: 1;
-  color: white;
-  /* border: 1px solid white; */
-  font-size: 1.2rem;
-  border-radius: 50px;
-  background-color:#e34c26;
-}
+
 .border{
   width: 70px;
   height: 70px;
@@ -520,7 +505,61 @@ box-shadow: 0px 0px 10px silver;
 
 
 
+.back{
+  width:100%;
+  height: 4rem;
+  /* background-color: black; */
+}
 
+#back-btn{
+  font-size: 5.3vw;
+  width: 40px;
+  margin-left: 4%;
+  margin-top: 5%;
+  border: none;
+  z-index: 1000;
+  background-color: white;
+  height: 40px;
+  /* background-color: beige; */
+  border-radius: 50px;
+}
 
+.logo{
+  width: 100%;
+  height: 6rem;
+  /* background-color: #6df5ff; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dp{
+  width: 80px;
+  height: 80px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../Photo/Picsart_25-02-01_19-00-31-305.jpg);
+  border: 5px solid blue;
+  /* background-color: black; */
+  border-radius: 50px;
+}
 
+hr{
+  width: 60%;
+  height: .7rem;
+  margin-top: 5%;
+  margin-left: 20%;
+  border: none;
+  border-radius: 50px;
+  background:linear-gradient(to right,blue,rgb(255, 255, 255));
+}
 
+#hr2{
+  width: 60%;
+  height: .7rem;
+  margin-top: 5%;
+  margin-left: 20%;
+  border: none;
+  border-radius: 50px;
+  background:linear-gradient(to left,rgb(0, 68, 255),rgb(255, 255, 255));
+}
