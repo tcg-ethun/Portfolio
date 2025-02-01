@@ -36,6 +36,7 @@ display: flex;
 }
 body{
   scrollbar-width: none;
+overflow-x:hidden;
 }
 .sub-edu{
   font-family: op;
