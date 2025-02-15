@@ -571,6 +571,7 @@ hr{
   width: 40px;
   background-image: url(../Photo/facebook.png);
   border-radius: 50px;
+  filter: drop-shadow(0px 0px 15px rgb(165, 165, 233));
   background-position: center;
   background-repeat: no-repeat;
   transition-duration: .2s;
@@ -591,6 +592,7 @@ hr{
 
 .whatsapp{
   width: 40px;
+  filter: drop-shadow(0px 0px 15px rgb(180, 255, 163));
   background-image: url(../Photo/whatsapp.png);
   background-position: center;
   background-repeat: no-repeat;
@@ -605,6 +607,7 @@ hr{
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  filter: drop-shadow(0px 0px 15px rgb(144, 144, 247));
   transition-duration: .2s;
   height: 40px;
   /* background-color: black; */
@@ -614,10 +617,11 @@ hr{
 
 #social-icon{
   margin-top: 10%;
-  width: 70%;
+  width: 60%;
+  background-color: #f8f8f8;
   border-radius: 50px;
-
-  box-shadow: 0px 6px 10px rgb(195, 195, 195);
+border-bottom: 10px solid silver;
+  /* box-shadow: 0px 6px 10px rgb(195, 195, 195); */
   /* background:linear-gradient(to bottom, rgb(195, 195, 252),rgb(255, 255, 255)); */
   padding: 20px;
   justify-content: space-evenly;
