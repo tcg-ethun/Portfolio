@@ -1,0 +1,323 @@
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Regular';
+      user-select: none;
+    }
+
+@font-face {
+  font-family: 'Bold';
+  src: url(Font/Inter_18pt-Bold.ttf);
+}
+@font-face {
+  font-family: 'Medium';
+  src: url(Font/Inter_18pt-Medium.ttf);
+}
+
+@font-face {
+  font-family: 'Regular';
+  src: url(Font/Inter_18pt-Regular.ttf);
+}
+
+#view{
+  font-size: 15px;
+}
+
+    .grid-container {
+      display: grid;
+      grid-template-columns:1fr;
+    }
+    body {
+      background-color: #05112f ;
+      color: #b6bfd2;
+      animation: fade .5s linear 1;
+    }
+
+    a {
+      color: blue;
+      text-decoration: none;
+    }
+
+
+@keyframes fade {
+  0%{
+opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+  
+}
+html{
+  scroll-behavior: smooth;
+}
+
+    .header h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      margin-top: 10%;
+      margin-left: 10%;
+       font-size: clamp(3rem, 5vw, 2.5rem);
+  font-family: 'Bold';
+    }
+
+    .header h3 {
+      font-size: 1.2rem;
+      width: 80%;
+      margin-left: 10%;
+      padding: 5px;
+  font-family: 'Medium';
+      color: #b6bfd2;
+      font-weight: normal;
+    }
+
+    .text {
+      margin-left: 10%;
+      font-size: 1rem;
+      line-height: 1.5;
+      color: #9fadbc;
+      font-family: 'Regular';
+      padding: 5px;
+      width: 90%;
+    }
+
+
+    .about-section, .project {
+      padding: 20px;
+    }
+
+    .about-section h3,
+    .project h3 {
+      font-size: 1.5rem;
+      margin-left: 5%;
+      margin-bottom: 10px;
+    }
+
+    .about-section p {
+      line-height: 1.6;
+      font-size: 1rem;
+    }
+
+    .content {
+      display: flex;
+      flex-wrap: wrap;
+        row-gap: 25px;
+    }
+
+
+
+    .connect{
+  width: 90%;
+  display: flex;
+  margin-top: 20px;
+  margin-left: 10%;
+  column-gap: 15px;
+  margin-bottom: 5%;
+}
+#hov{
+width: 40px;
+padding: 6px;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 40px;
+border-radius: 50px;
+background-color: rgb(224, 225, 226);
+}
+img{
+  width: 25px;
+}
+
+.github{
+  color: black;
+}
+
+p{
+  width: 90%;
+  margin-left: 5%;
+}
+
+
+
+.sidebar {
+  position: fixed;
+  top: 0; right: -250px;  
+  width: 250px;
+  height: 100vh;
+  background: #000b10;
+  color: white;
+  padding: 20px;
+  box-sizing: border-box;
+  transition: right 0.3s ease;
+  z-index: 10001;
+  overflow-y: auto;
+}
+
+/* Sidebar visible */
+.sidebar.active {
+  right: 0;
+}
+
+/* Menu button */
+.menu-btn {
+  position: fixed;
+  top: 15px;
+  right: 15px;  
+  z-index: 11002;
+  font-size: 24px;
+  background:rgb(4, 39, 97);
+  border-radius: 50px;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+/* Close button inside sidebar */
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+/* Links */
+.sidebar nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 5px;
+  align-items: center;
+  display: block;
+  border-radius: 50px;
+  cursor: none;
+  margin: 10px 0;
+}
+.sidebar nav a:active{
+  
+}
+.overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  backdrop-filter: blur(6px); /* ← blur effect */
+  background: rgba(0, 0, 0, 0.2); /* light darkening */
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+  z-index: 10000;
+}
+
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+
+/* Hide on wider screens */
+@media(min-width: 768px) {
+  .sidebar, .menu-btn, .overlay {
+    display: none;
+  }
+}
+
+#about-top{
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+    .box {
+      width: 90%;
+      display: flex;
+      margin-left: 5%;
+      row-gap: 10px;
+      column-gap: 10px;
+      flex-wrap: wrap;
+      background-color: transparent;
+      border: 2px solid rgb(116, 116, 141);
+      border-radius: 5px;
+      padding: 10px;
+    }
+
+    
+.box #image-section{
+  width: 100%;
+  height: 150px;
+  border-radius: 10px;
+  background-image: url(Book.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  background-position: center;
+}
+
+.box #image-section2{
+  width: 100%;
+  height: 150px;
+  border-radius: 10px;
+  background-image: url(Encryption.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.box #image-section3{
+  width: 100%;
+  height: 150px;
+  border-radius: 10px;
+  background-image: url(Disc.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.box #image-section4{
+  width: 100%;
+  height: 150px;
+  border-radius: 10px;
+  background-image: url(Graident.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.box #image-section5{
+  width: 100%;
+  height: 150px;
+  border-radius: 10px;
+  background-image: url(Gallery.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+
+#svg{
+  opacity: .3;
+  /* position: absolute; */
+}
+
+
+
+
+.box #title{
+       font-size: clamp(1.2rem, 3vw, .5rem);
+  font-family: 'Medium';
+  color: rgb(122, 159, 247);
+  transition-duration: .3s;
+}
+.box #title:hover{
+  color: white;
+}
+
+#detail{
+       font-size: clamp(1rem, 3vw, .5rem);
+       color: #bebfc0;
+       margin-bottom: 5%;
+}

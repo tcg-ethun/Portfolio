@@ -1,164 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable="no">
-    <title>Personal Portfolio</title>
-    <link rel="stylesheet" href="Text/style.css">
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-  />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <title>Esan</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="Phone.css">
+<link rel="stylesheet" href="Desktop.css">
 </head>
 <body>
-    
-  <div class="back">
-    <button  onclick="window.location.href='https://tcg-ethun.github.io/Education/'" id="back-btn"><i class="fa-solid fa-arrow-left"></i></button>
-  </div>
+  <div class="grid-container">
 
-
-<div class="logo">
-  <div class="dp"></div>
+    <button id="menuBtn" class="menu-btn">☰ </button>
+<div id="sidebar" class="sidebar">
+  <button id="closeBtn" class="close-btn">&times;</button>
+  <nav>
+    <a href="#home">Home</a><br/>
+    <a href="#about-top">About</a><br/>
+    <a href="#project-top">Projects</a><br/>
+  </nav>
 </div>
-
-<hr>
-<hr id="hr2">
-
-<p>  <b> Hello ,</b><font color="blue"> &nbsp; I'm Ethun !</font></p> <br>
-
-  <p class="sub-p">  I am a  student of Bangladesh Noubahini School and College, Kaptai. 
-  I am passionate about technology, programming, and solving problems creatively.
-  This portfolio showcases my journey, skills, and aspirations as I work towards becoming a software engineer. Thank you for visiting, and I hope you find inspiration here!
-  </p>
+<div id="overlay" class="overlay"></div>
 
 
 
 
+    <div class="header" id="home">
 
-<div class="skill-container">
-  <div class="skill"> <font  color="black" >Tech</font> Stack</div>
-  
-<img src="Photo/skill.png" width="170" alt="">
-<div class="skill-talk">I have a strong interest in programming and web development . Here is my Language skills &nbsp;<i class="fa-solid fa-arrow-down"></i>
-<div class="skill-box">
-<a href="#">Html  &nbsp;
-<progress max="100"  value="80"></progress>
-</a>
-<a href="#">CSS  &nbsp;  &nbsp;
-  <progress max="100"  value="70"></progress>
-  </a>
-  <a href="#">C    &nbsp;  &nbsp;  &nbsp;  &nbsp;
-    <progress max="100"  value="50"></progress>
-    </a>
-  <a href="#">JS   &nbsp;  &nbsp;  &nbsp;  &nbsp;
-    <progress max="100"  value="40"></progress>
-    </a>
-  <a href="#">Python   &nbsp;  &nbsp;  &nbsp;  &nbsp;
-    <progress max="100"  value="25"></progress>
-    </a>
+        
+      <h1 id="h1"><font color="white">I'm</font>&nbsp;<span style="color: gold;">Ethun</span></h1>
+      <h3>Student Developer <i class="fa-solid fa-code"></i></h3>
+      <div class="text">Every bug is a hidden lesson.</div>
+      <div class="connect"> 
+   <div class="github" id="hov" onclick="window.location.href='https://github.com/tcg-ethun'"> <i class="fa-brands fa-github fa-lg"></i> </div>
+   <div class="leetcode" id="hov" onclick="window.location.href='https://leetcode.com/u/V29Chx70Mj/'"><img src="leetcode.svg" alt=""></div>
+   <div class="instagram" id="hov" onclick="window.location.href='https://www.instagram.com/im.esann?igsh=aHRxbjIxMDdleHVv'"> <img src="instagram.svg" alt=""></div>
+   <div class="whatsapp" id="hov" onclick="window.location.href='https://www.facebook.com/share/1C47inqxoC/'"><i class="fa-brands fa-facebook-f fa-xl" style="color: #025af2;"></i></div>
 </div>
-</div>
-</div>
+    </div>
 
 
-<div class="Experience">
-<div class="exp-head">Experience  <i class="fa-regular fa-star" style="color: blue;"></i> </div> <br>
+    <div class="main-content">
 
-<img src="Photo/busi.png" width="170" alt="">
-<div id="exp-dev">
-  
-  <!-- <i class="fa-solid fa-arrow-right" style="color: #0158ef;"></i> &nbsp;
-  Student Web Developer <br>
-Bangladesh Noubahini School and College, Kaptai
-(January 2025 - Present)   <br> <br>  -->
+      <div class="about-section">
+        <div id="about-top"></div> <br>
+        <h3 id="about"><font color="white">About</font></h3>
+        <p><i class="fa-solid fa-quote-left" style="color: #42a7f5;"></i>&nbsp;I'm a passionate and self-motivated student at Bangladesh Noubahini College with a strong interest in programming and software development. I enjoy building projects and solving coding problems, which constantly improves my logical thinking and problem-solving abilities. My dedication to learning and exploring new technologies drives me to take on challenges and develop efficient, real-world solutions. This portfolio showcases various projects that I have built independently or with the assistance of Artificial Intelligence.&nbsp;<i class="fa-solid fa-quote-right" style="color: #6da2f8;"></i></p>
+      </div>
 
-<i class="fa-solid fa-arrow-right" style="color: #0158ef;"></i>  &nbsp;
-Collaborated with teachers and classmates to develop simple, user-friendly websites for school projects. <br>  <br>
+      <div class="project">
+        <div id="project-top"></div> <br>
+        <h3 id="about"><font color="white">Project</font></h3>
+        <p>My personal collection of programming work, built with logic, curiosity, and a drive to turn ideas into working solutions.</p> <br>
+        <div class="content">
 
-<i class="fa-solid fa-arrow-right" style="color: #0158ef;"></i>  &nbsp;
-Designed responsive layouts using HTML and CSS, ensuring cross-device compatibility. <br>  <br>
+          <div class="box">
+              <div id="title" onclick="window.location.href='https://tcg-ethun.github.io/Education/'">1. Education&nbsp; <i id="view" class="fa-solid fa-up-right-from-square" style="color: #6ba7f6;"></i></div>
+              <div id="detail">Empowering students with the knowledge and skills to succeed in every step of their journey.</div>
+              <div id="image-section"></div>
+          </div>
 
-<i class="fa-solid fa-arrow-right" style="color: #0158ef;"></i>  &nbsp;
-Assisted classmates in understanding coding concepts and solving bugs during group assignments.
+          <div class="box">
+              <div id="title" onclick="window.location.href='https://tcg-ethun.github.io/AES-256/'">2. File Encryption&nbsp; <i id="view" class="fa-solid fa-up-right-from-square" style="color: #6ba7f6;"></i></div>
+              <div id="detail">Advanced Web Application for Secure File Handling with AES-256 Encryption. </div>
+              <div id="image-section2"></div>
+          </div>
 
-</div>
-</div>
-<br>
+          <div class="box">
+              <div id="title" onclick="window.location.href='https://tcg-ethun.github.io/Disc-Rolling/'">3. Rolling Game&nbsp; <i id="view" class="fa-solid fa-up-right-from-square" style="color: #6ba7f6;"></i></div>
+              <div id="detail">One Roll Can Change Everything.</div>
+              <div id="image-section3"></div>
+          </div>
 
-<div class="Experience">
-<div class="exp-head">Contact   <i class="fa-solid fa-envelope-circle-check" style="color: #005eff;"></i> </div> <br>
+          <div class="box">
+              <div id="title" onclick="window.location.href='https://tcg-ethun.github.io/Gradient-Generator/'"> 4.Gradient Generator &nbsp; <i id="view" class="fa-solid fa-up-right-from-square" style="color: #6ba7f6;"></i></div>
+              <div id="detail"> Design Like a Pro – Instantly Generate Customizable Gradient Colors for Any Use. </div>
+              <div id="image-section4"></div>
+          </div>
 
-<img src="Photo/undraw_personal-email_hfut.png" width="170" alt="">
-<div id="social-icon">
-  <div class="fb" onclick="window.location.href='https://www.facebook.com/share/12ESG5oEuDv/'"></div>
-  <div class="whatsapp" onclick="window.location.href='https://wa.me/8801622544070'"></div>
-  <div class="gmail" onclick="window.location.href='mailto:ethuntcg@gmail.com'"></div>
-
-</div>
-</div>
-
-<!--
-<div class="Education">
-  <div class="edu-head">Education <i class="fa-solid fa-graduation-cap" style="color: #000000;"></i></div>
-
-    <img src="Photo/show.png" width="130" alt="">
-    <p class="sub-edu"> 
-      I am currently a student of Class XII at Bangladesh Noubahini School and College, Kaptai, 
-      specializing in Business Studies. As a student from a business background, I have developed an analytical 
-      mindset and problem-solving skills that complement my growing passion for technology and programming.
-
-    </p>
-</div>
+          <div class="box">
+              <div id="title" onclick="window.location.href='https://tcg-ethun.github.io/Animate69/'">  5. Photo Gallery &nbsp; <i id="view" class="fa-solid fa-up-right-from-square" style="color: #6ba7f6;"></i></div>
+              <div id="detail"> All Photo made by AI ! I just store all photo here as a website.  </div>
+              <div id="image-section5"></div>
+          </div>
 
 
-<div class="Project">
-  <div class="edu-head">Course  <i class="fa-solid fa-diagram-project" style="color: #000205;"></i></div> 
-
-    <img src="Photo/project.png" width="230" alt="">
-    <p class="sub-pro"> 
-     As a  beginner in Programming world , I have worked on small yet meaningful projects to apply and enhance my 
-     skill. Here is My some Project -
-
-    </p>
-</div> -->
+        </div>
+      </div>
 
 
-<!-- <div class="list" onclick="hey()" id="course">
-  <div class="sub-list">  My <font color="white"> &nbsp;   Course   &nbsp;</font> <i class="fa-solid fa-arrow-right" style="color: #9cc0fe;"></i></div>
-</div> -->
+      </div>
 
 
-
-<!-- 
-<div class="e-card playing">
-     <div class="image"> <div class="border"> <div class="logo"><i class="fa-brands fa-html5 fa-xl"></i></div></div> </div>
-     <div class="wave"></div>
-     <div class="wave"></div>
-     <div class="wave"></div>
-   
-         <div class="infotop">
-       <svg xmlns="htp://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="icon"></svg><br>
-        HTML <br>
-    <div class="name" onclick="window.location.href='../Html/html-home.html'">Learn &nbsp; <i class="fa-solid fa-arrow-right"></i> </div>
-     </div>
-   </div> -->
-
-<!-- <div class="img-box"> -->
-   <!-- <img src="/Photo/Logo.png" width="300" alt="" class="animate__animated animate__fadeIn"> -->
-  </div>
-   </div>
-<!-- 
-   <div class="about">
-    <div class="about-content">
 
     </div>
-   </div> -->
-
-    <footer>
-              <h6>&copy; Ethun  </font></h6>
-    </footer>
-  <script src="script.js"></script>
+  </div>
+<script src="script.js"></script>
 </body>
 </html>

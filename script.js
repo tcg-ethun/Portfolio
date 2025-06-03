@@ -1,32 +1,40 @@
+window.onload = function() {
+  setTimeout(() => {
+    document.getElementById('loader').style.display = 'none';
+    document.getElementById('content').style.display = 'block';
 
+    // Smooth scroll to hash if it exists
+    if (window.location.hash) {
+      const target = document.querySelector(window.location.hash);
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
 
-document.getElementById("course");
+  }, 600);  
+};
 
-function hey(){
-    window.location.href='./Html/course.html'
+const menuBtn = document.getElementById('menuBtn');
+const closeBtn = document.getElementById('closeBtn');
+const sidebar = document.getElementById('sidebar');
+const overlay = document.getElementById('overlay');
+
+function closeSidebar() {
+  sidebar.classList.remove('active');
+  overlay.classList.remove('active');
+  menuBtn.style.display = 'block'; // Show menu button
 }
 
+menuBtn.addEventListener('click', () => {
+  sidebar.classList.add('active');
+  overlay.classList.add('active');
+  menuBtn.style.display = 'none'; // Hide menu button
+});
 
-// const arrowMul = (a,b) => {
-//     console.log(a*b);
-// }
+closeBtn.addEventListener('click', closeSidebar);
+overlay.addEventListener('click', closeSidebar);
 
-// let a = 20,
-//  b = 10;
-
-// const sumArrow = (a,b) => {
-//     console.log( "The sum is " = a+b)  // ans is 
-// }
-
-
-
-function  vowelFun(str){
-    let count = 0 ;
-for (const char of str){
-if (  char === "a" || char === "e " || char === "i" ||char === "o " || char === "u "){
-    count ++;
-    console.log
-}
-console.log(vowelFun)
-}
-}
+// NEW: close sidebar on nav link click
+document.querySelectorAll('#sidebar nav a').forEach(link => {
+  link.addEventListener('click', closeSidebar);
+});
