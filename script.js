@@ -38,3 +38,8 @@ overlay.addEventListener('click', closeSidebar);
 document.querySelectorAll('#sidebar nav a').forEach(link => {
   link.addEventListener('click', closeSidebar);
 });
+
+
+function alt(){
+    window.alert("Nothing Found !")
+}
