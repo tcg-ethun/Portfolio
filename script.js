@@ -3,7 +3,6 @@ window.onload = function() {
     document.getElementById('loader').style.display = 'none';
     document.getElementById('content').style.display = 'block';
 
-    // Smooth scroll to hash if it exists
     if (window.location.hash) {
       const target = document.querySelector(window.location.hash);
       if (target) {
