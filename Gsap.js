@@ -22,7 +22,7 @@
                     gsap.to(element, {
                         opacity: 1,
                         x: 0,
-                        duration: 1,
+                        duration: .7,
                         delay: delay,
                         ease: "power2.out",
                         scrollTrigger: {
@@ -177,3 +177,36 @@
             elements.forEach(el => el.classList.add(`animate-${animationType}`));
             ScrollTrigger.refresh();
         }
+
+          document.querySelectorAll('[data-highlight]').forEach((section) => {
+    let triggered = false;
+
+    ScrollTrigger.create({
+      trigger: section,
+      start: "top 80%",
+      once: true,
+      onEnter: () => {
+        if (triggered) return;
+        triggered = true;
+
+        const counters = section.querySelectorAll('.number');
+        counters.forEach(counter => {
+          const target = +counter.getAttribute('data-target');
+          gsap.fromTo(counter, {
+            innerText: 0
+          }, {
+            innerText: target,
+            duration: 1.5,
+            ease: "power2.out",
+            snap: { innerText: 1 },
+            onUpdate: () => {
+              counter.innerText = Math.floor(counter.innerText);
+            },
+            onComplete: () => {
+              counter.innerText = target.toLocaleString();
+            }
+          });
+        });
+      }
+    });
+  });

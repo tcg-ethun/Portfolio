@@ -88,3 +88,23 @@ function alt(){
                 }, 100);
             });
         });
+
+        
+  const counters = document.querySelectorAll('.number');
+
+  counters.forEach(counter => {
+    counter.innerText = '0';
+    const updateCount = () => {
+      const target = +counter.getAttribute('data-target');
+      const current = +counter.innerText;
+      const increment = Math.ceil(target / 100);
+
+      if (current < target) {
+        counter.innerText = Math.min(current + increment, target);
+        setTimeout(updateCount, 25);
+      } else {
+        counter.innerText = target;
+      }
+    };
+    updateCount();
+  });

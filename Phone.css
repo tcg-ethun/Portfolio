@@ -63,21 +63,34 @@ scroll-behavior: smooth;
   flex-direction: column;
   row-gap: 10px;
 }
-
+.over{
+  margin-left: 8%;
+  width: 90%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 10%;
+  font-weight: 900;
+  color: white;
+ font-size: clamp(1.4rem,2vw,1.4rem);
+  margin-top: 20%;
+}
 .go{
   border-radius: 50px;
-  height: 3.4rem;
+  height: 3.3rem;
   font-weight: 700;
   display: flex;
   margin-top: 10%;
   justify-content: center;
   align-items: center;
-  color: black;
-  color: #a3a3f0;
+  color: rgb(255, 255, 255);
   user-select: none;
-  background-color: #dad9d9;
+  background-color: #bbc3cd;
   width: 140px;
-  box-shadow: 0px 05px 15px rgb(41, 73, 152);
+  transition-duration: .2;
+}
+.go:active{
+transform: scale(.9);
 }
 .go a{
   color: rgb(0, 0, 0);
@@ -581,7 +594,7 @@ footer a{
             color: #bd93f9;
         }
         
-        .number {
+        .numbe{
             color: #ffb86c;
         }
         
@@ -955,3 +968,57 @@ footer a{
         .sticky-note:nth-child(6) { animation-delay: -2.5s; }
 
 
+
+
+
+    .card {
+      /* flex: 1 1 250px; */
+      /* background: linear-gradient(135deg, #a29bfe, #6c5ce7); */
+      border: none;
+      margin-top: 13%;
+      background: linear-gradient(to top,rgb(0, 0, 0),rgb(13, 10, 117));
+      border-top: 2px solid rgb(9, 9, 121);
+      /* border-left: 2px solid blue; */
+      margin-bottom: 10%;
+      border-radius: 16px;
+      text-align: center;
+      transition: transform 0.3s ease;
+      box-shadow: 0 5px 20px rgba(178, 176, 176, 0.03);
+
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h2 {
+      margin: 0;
+      font-size: 1.8rem;
+      color: #ffffff;
+    }
+
+    .card p {
+      margin-top: 10px;
+      color: #e7e7e7;
+      font-size: 0.9rem;
+    }
+
+    .number {
+      font-size: 2.2rem;
+      font-weight: bold;
+      margin: 15px 0;
+    }
+
+    .card:nth-child(1) .number {
+      color: #e7c208;
+    }
+
+    .card:nth-child(2) .number {
+      color: #f54b4b;
+    }
+
+    .card:nth-child(3) .number {
+      color: #18e709;
+    }
+
+ 

@@ -1,12 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Motivational Sticky Notes</title>
-    
+  <meta charset="UTF-8">
+  <title>My Highlights Section</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #000;
+      margin: 0;
+      padding: 0;
+      min-height: 200vh;
+    }
+
+    .highlight-wrapper {
+      padding: 60px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .highlight-title {
+      color: #fff;
+      font-size: 2rem;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    .view-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      background: #111;
+      border-radius: 20px;
+      padding: 40px 20px;
+      box-shadow: 0 10px 25px rgba(255, 255, 255, 0.05);
+      width: 100%;
+      max-width: 1200px;
+    }
+
+    .card {
+      flex: 1 1 250px;
+      background: #1a1a1a;
+      border-radius: 16px;
+      padding: 30px 20px;
+      text-align: center;
+      box-shadow: 0 5px 20px rgba(255, 255, 255, 0.03);
+      max-width: 300px;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h2 {
+      margin: 0;
+      font-size: 1.6rem;
+      color: #fff;
+    }
+
+    .card p {
+      margin-top: 10px;
+      color: #aaa;
+      font-size: 0.9rem;
+    }
+
+    .number {
+      font-size: 2.2rem;
+      font-weight: bold;
+      margin: 15px 0;
+    }
+
+    .card:nth-child(1) .number {
+      color: #ff4d4f;
+    }
+
+    .card:nth-child(2) .number {
+      color: #52c41a;
+    }
+
+    .card:nth-child(3) .number {
+      color: #1890ff;
+    }
+
+    @media (max-width: 768px) {
+      .card {
+        flex: 1 1 100%;
+      }
+    }
+  </style>
 </head>
 <body>
-    
+
+<div class="highlight-wrapper">
+  <h1 class="highlight-title">My Highlights</h1>
+
+
+</div>
+
+<!-- GSAP + ScrollTrigger CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+<script>
+  gsap.registerPlugin(ScrollTrigger);
+
+
+</script>
+
 </body>
 </html>
