@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GSAP ScrollTrigger Animation System</title>
+    <title>Tech Stack Journey</title>
     <style>
         * {
             margin: 0;
@@ -12,46 +12,360 @@
         }
 
         body {
-            font-family: 'Arial', sans-serif;
-            background: #0a0a0a;
-            color: white;
-            overflow-x: hidden;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 50px 20px;
         }
 
-      
-   
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            position: relative;
+        }
 
+        .title {
+            text-align: center;
+            color: white;
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 60px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
 
-        /* Responsive */
-        @media (max-width: 768px) {
-            .hero-title {
-                font-size: 2.5rem;
+        .path-container {
+            position: relative;
+            height: 1000px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .svg-path {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        .tech-item {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 25px 30px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            z-index: 2;
+            width: 350px;
+            border: 2px solid rgba(255,255,255,0.2);
+        }
+
+        .tech-item:hover {
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+        }
+
+        .tech-item.left {
+            flex-direction: row;
+            transform-origin: left center;
+        }
+
+        .tech-item.right {
+            flex-direction: row-reverse;
+            text-align: right;
+            transform-origin: right center;
+        }
+
+        .tech-logo {
+            width: 70px;
+            height: 70px;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            color: white;
+            font-weight: bold;
+            flex-shrink: 0;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        }
+
+        .html-logo { background: linear-gradient(135deg, #e34f26, #f06529); }
+        .css-logo { background: linear-gradient(135deg, #1572b6, #33a9dc); }
+        .js-logo { background: linear-gradient(135deg, #f7df1e, #f0db4f); color: #323330; }
+        .c-logo { background: linear-gradient(135deg, #00599c, #004482); }
+        .python-logo { background: linear-gradient(135deg, #3776ab, #ffd43b); }
+
+        .tech-content h3 {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 8px;
+        }
+
+        .tech-content p {
+            color: #7f8c8d;
+            font-size: 1rem;
+            line-height: 1.4;
+        }
+
+        .path-dot {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+            border-radius: 50%;
+            border: 4px solid white;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            z-index: 3;
+            animation: pulse 2s infinite;
+            transform: translate(-50%, -50%);
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: translate(-50%, -50%) scale(1); }
+            50% { transform: translate(-50%, -50%) scale(1.2); }
+        }
+
+        /* Desktop positioning - following the path exactly */
+        @media (min-width: 769px) {
+            /* HTML - Start point (top-left) */
+            .tech-item:nth-child(2) {
+                top: 80px;
+                left: 50px;
             }
             
-            .section-title {
+            .path-dot:nth-child(3) {
+                top: 120px;
+                left: 250px;
+            }
+
+            /* CSS - First curve (top-right) */
+            .tech-item:nth-child(4) {
+                top: 180px;
+                right: 50px;
+            }
+            
+            .path-dot:nth-child(5) {
+                top: 220px;
+                left: 700px;
+            }
+
+            /* JavaScript - Middle curve (center-left) */
+            .tech-item:nth-child(6) {
+                top: 380px;
+                left: 100px;
+            }
+            
+            .path-dot:nth-child(7) {
+                top: 420px;
+                left: 350px;
+            }
+
+            /* C - Lower curve (center-right) */
+            .tech-item:nth-child(8) {
+                top: 580px;
+                right: 100px;
+            }
+            
+            .path-dot:nth-child(9) {
+                top: 620px;
+                left: 650px;
+            }
+
+            /* Python - End point (bottom-left) */
+            .tech-item:nth-child(10) {
+                top: 780px;
+                left: 150px;
+            }
+            
+            .path-dot:nth-child(11) {
+                top: 820px;
+                left: 400px;
+            }
+        }
+
+        /* Mobile responsive */
+        @media (max-width: 768px) {
+            .path-container {
+                height: 1200px;
+            }
+            
+            .tech-item {
+                width: 280px;
+                padding: 20px;
+                gap: 15px;
+            }
+            
+            .tech-logo {
+                width: 50px;
+                height: 50px;
+                font-size: 1.2rem;
+            }
+            
+            .tech-content h3 {
+                font-size: 1.4rem;
+            }
+            
+            .tech-content p {
+                font-size: 0.9rem;
+            }
+            
+            .title {
                 font-size: 2rem;
             }
+
+            /* Mobile positioning - vertical stack following mobile path */
+            .tech-item:nth-child(2) {
+                top: 100px;
+                left: 20px;
+            }
             
-            .card {
-                min-width: 250px;
+            .path-dot:nth-child(3) {
+                top: 140px;
+                left: 50%;
+            }
+
+            .tech-item:nth-child(4) {
+                top: 250px;
+                right: 20px;
+            }
+            
+            .path-dot:nth-child(5) {
+                top: 290px;
+                left: 50%;
+            }
+
+            .tech-item:nth-child(6) {
+                top: 400px;
+                left: 20px;
+            }
+            
+            .path-dot:nth-child(7) {
+                top: 440px;
+                left: 50%;
+            }
+
+            .tech-item:nth-child(8) {
+                top: 550px;
+                right: 20px;
+            }
+            
+            .path-dot:nth-child(9) {
+                top: 590px;
+                left: 50%;
+            }
+
+            .tech-item:nth-child(10) {
+                top: 700px;
+                left: 20px;
+            }
+            
+            .path-dot:nth-child(11) {
+                top: 740px;
+                left: 50%;
             }
         }
     </style>
 </head>
 <body>
+    <div class="container">
+        <h1 class="title">My Tech Stack Journey</h1>
+        
+        <div class="path-container">
+            <!-- SVG Dashed Path -->
+            <svg class="svg-path" viewBox="0 0 1000 800" preserveAspectRatio="xMidYMid meet">
+                <!-- Desktop Path -->
+                <path 
+                    d="M 150 120 Q 400 60 650 220 Q 800 300 650 420 Q 500 500 350 620 Q 200 720 400 820" 
+                    stroke="#ffffff" 
+                    stroke-width="6" 
+                    stroke-dasharray="20,15" 
+                    fill="none"
+                    opacity="0.9"
+                    class="desktop-path"
+                />
+                
+                <!-- Mobile Path -->
+                <path 
+                    d="M 200 140 Q 400 180 600 290 Q 800 400 600 440 Q 400 480 200 590 Q 0 700 200 740" 
+                    stroke="#ffffff" 
+                    stroke-width="4" 
+                    stroke-dasharray="15,10" 
+                    fill="none"
+                    opacity="0.9"
+                    class="mobile-path"
+                    style="display: none;"
+                />
+            </svg>
 
-    <!-- Text Section -->
+            <!-- HTML -->
+            <div class="tech-item left">
+                <div class="tech-logo html-logo">HTML</div>
+                <div class="tech-content">
+                    <h3>HTML</h3>
+                    <p>The foundation of web development. Structure and semantic markup for creating robust web pages.</p>
+                </div>
+            </div>
+            <div class="path-dot"></div>
 
+            <!-- CSS -->
+            <div class="tech-item right">
+                <div class="tech-content">
+                    <h3>CSS</h3>
+                    <p>Styling and layout powerhouse. Creating beautiful, responsive designs with modern CSS techniques.</p>
+                </div>
+                <div class="tech-logo css-logo">CSS</div>
+            </div>
+            <div class="path-dot"></div>
 
-    <!-- GSAP Scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script>
- 
+            <!-- JavaScript -->
+            <div class="tech-item left">
+                <div class="tech-logo js-logo">JS</div>
+                <div class="tech-content">
+                    <h3>JavaScript</h3>
+                    <p>Dynamic web interactions and modern frameworks. Bringing websites to life with interactivity.</p>
+                </div>
+            </div>
+            <div class="path-dot"></div>
 
+            <!-- C -->
+            <div class="tech-item right">
+                <div class="tech-content">
+                    <h3>C</h3>
+                    <p>Low-level programming mastery. System programming and understanding computer fundamentals.</p>
+                </div>
+                <div class="tech-logo c-logo">C</div>
+            </div>
+            <div class="path-dot"></div>
 
+            <!-- Python -->
+            <div class="tech-item left">
+                <div class="tech-logo python-logo">PY</div>
+                <div class="tech-content">
+                    <h3>Python</h3>
+                    <p>Versatile and powerful. Data science, web development, automation, and artificial intelligence.</p>
+                </div>
+            </div>
+            <div class="path-dot"></div>
+        </div>
+    </div>
 
-
-    </script>
+    <style>
+        @media (max-width: 768px) {
+            .desktop-path { display: none !important; }
+            .mobile-path { display: block !important; }
+        }
+        
+        @media (min-width: 769px) {
+            .desktop-path { display: block !important; }
+            .mobile-path { display: none !important; }
+        }
+    </style>
 </body>
 </html>
