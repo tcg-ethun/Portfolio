@@ -108,3 +108,29 @@ function alt(){
     };
     updateCount();
   });
+
+
+
+
+
+
+// Light Mode-Dark mode
+const root = document.documentElement;
+const toggleBtn = document.getElementById("toggleBtn");
+const icon = document.getElementById("themeIcon");
+
+// Apply saved theme or default to dark
+const savedTheme = localStorage.getItem("theme") || "dark";
+root.setAttribute("data-theme", savedTheme);
+icon.className = savedTheme === "dark" ? "fas fa-moon" : "fas fa-sun";
+
+// Toggle theme and icon
+toggleBtn.addEventListener("click", () => {
+  const current = root.getAttribute("data-theme");
+  const next = current === "dark" ? "light" : "dark";
+  root.setAttribute("data-theme", next);
+  localStorage.setItem("theme", next);
+
+  // Update icon
+  icon.className = next === "dark" ? "fas fa-moon" : "fas fa-sun";
+});

@@ -11,6 +11,25 @@ scroll-behavior: smooth;
       user-select: none;
     }
 
+:root {
+  --bg-color: #000000;
+  --text-color: #ffffff;
+  --text-color2:  #bbc3cd;
+  --logo:white;
+  --title:rgb(122, 122, 250);
+  --go:rgb(197, 197, 198);
+    --goldBlue:rgb(215, 176, 1);
+}
+
+[data-theme="light"] {
+  --text-color2:  #4b4c4e;
+  --bg-color: #ffffff;
+  --title:rgb(15, 15, 252);
+  --logo:rgb(235, 234, 234);
+  --text-color3:rgb(57, 57, 134);
+  --goldBlue:rgb(15, 15, 139);
+  --text-color: #000000;
+}
 
 @font-face {
   font-family: 'Bold';
@@ -33,24 +52,15 @@ scroll-behavior: smooth;
   display: flex;
   z-index: 10000;
   top: 0;
-  justify-content: space-between;
+  justify-content:space-evenly;
   align-items: center;
   height: 3.2rem;
   position: fixed;
   backdrop-filter: blur(15px);
-  /* background-color: transparent black; */
   width: 100%;
 }
 
-.top-head #logo{
-  margin-left: 5%;
-  margin-top: 2%;
-  border-radius: 50px;
-  width: 70px;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-}
+
 
 .quote-section{
   width: 100%;
@@ -71,7 +81,7 @@ scroll-behavior: smooth;
   align-items: center;
   margin-bottom: 10%;
   font-weight: 900;
-  color: white;
+  color:var(--text-color);
  font-size: clamp(1.4rem,2vw,1.4rem);
   margin-top: 20%;
 }
@@ -83,9 +93,9 @@ scroll-behavior: smooth;
   margin-top: 10%;
   justify-content: center;
   align-items: center;
-  color: rgb(255, 255, 255);
+  color: var(--text-color);
   user-select: none;
-  background-color: #bbc3cd;
+  background-color:var(--go);
   width: 140px;
   transition-duration: .2;
 }
@@ -99,7 +109,6 @@ transform: scale(.9);
   background-image: url(Image/365.png);
   width: 90%;
   opacity: .6;
-  /* transform: rotate(20deg); */
   height: 300px;
   background-repeat: no-repeat;
   background-size: cover;
@@ -112,8 +121,8 @@ transform: scale(.9);
       grid-template-columns:1fr;
     }
     body {
-      background-color: #000000 ;
-      color: #b6bfd2;
+      background-color:var(--bg-color);
+      color: var(--text-color2);
       animation: fade .5s linear 1;
     }
 
@@ -142,17 +151,24 @@ html{
     .header h1 {
       font-weight: bold;
       animation: fex .4s linear 1;
-
+color: var(--text-color);
       margin-top: 10%;
       margin-left: 12%;
        font-size: clamp(2.3rem, 5vw, 2.5rem);
   font-family:'pop';
     }
+
+    #Ethun{
+color: var(--goldBlue);
+    }
+
 button{
   padding: 10px;
   border: none;
-  background-color: gold;
+  background-color:var(--text-color2);
+  position: relative;
   border-radius: 5px;
+  margin-left: 30%;
   transition-duration: .2s;
 }
 button:active{
@@ -165,11 +181,10 @@ button:active{
       font-size: 1.2rem;
       width: 80%;
       margin-left: 10%;
+      color: var(--text-color3);
       padding: 5px;
       animation: fex .4s linear 1;
-
   font-family: 'Medium';
-      color: #b6bfd2;
       font-weight: normal;
     }
 
@@ -178,9 +193,8 @@ button:active{
       font-size: 1rem;
       line-height: 1.5;
       animation: fex .4s linear 1;
-
-      color: #9fadbc;
       font-family: 'Regular';
+      color: var(--text-color3);
       padding: 5px;
       width: 90%;
     }
@@ -194,6 +208,7 @@ button:active{
     .project h3 {
       font-size: 1.5rem;
       display: flex;
+      color: var(--text-color);
       width: 80%;
       justify-content: space-between;
       margin-left: 5%;
@@ -231,7 +246,7 @@ justify-content: center;
 align-items: center;
 height: 40px;
 border-radius: 50px;
-background-color: rgb(224, 225, 226);
+background-color: var(--logo);
 }
 
 
@@ -245,6 +260,7 @@ img{
 
 p{
   width: 90%;
+  color: var(--text-color);
   margin-left: 5%;
 }
 
@@ -255,8 +271,8 @@ p{
   top: 0; right: -250px;  
   width: 250px;
   height: 100vh;
-  background: #000b10;
-  color: white;
+  background: var(--bg-color);
+  color:var(--text-color);
   padding: 20px;
   box-sizing: border-box;
   transition: right 0.3s ease;
@@ -271,16 +287,18 @@ p{
 
 /* Menu button */
 .menu-btn {
-  top: 15px;
-  margin-right: 20px;  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height:40px;
+  margin-right: 30px;
+  width: 40%;
   z-index: 11002;
   font-size: 19px;
-  background:none;
+  color: var(--text-color);
+  background: none;
   border-radius: 50px;
-  color: white;
   border: none;
-  padding: 10px 15px;
-  cursor: pointer;
 }
 
 /* Close button inside sidebar */
@@ -288,14 +306,14 @@ p{
   background: none;
   border: none;
   font-size: 28px;
-  color: white;
+  color: var(--text-color);
   cursor: pointer;
   margin-bottom: 20px;
 }
 
 /* Links */
 .sidebar nav a {
-  color: white;
+  color: var(--text-color);
   text-decoration: none;
       animation: fex .4s linear 1;
   font-size: 18px;
@@ -320,8 +338,7 @@ nav{
 .overlay {
   position: fixed;
   top: 0; left: 0; right: 0; bottom: 0;
-  backdrop-filter: blur(6px); /* ← blur effect */
-  background: rgba(0, 0, 0, 0.2); /* light darkening */
+  backdrop-filter: blur(6px); 
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s ease;
@@ -332,8 +349,24 @@ nav{
   opacity: 1;
   visibility: visible;
 }
+#hero{
+  width: 100%;
+visibility: hidden;
+}
 
-
+#toggleBtn{
+  width: 80px;
+  color:var(--bg-color);
+  background: none;
+  display: flex;
+  background: var(--text-color);
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  position:relative;
+  border-radius: 50px;
+  height: 40px;
+}
 
 /* Hide on wider screens */
 @media(min-width: 768px) {
@@ -427,7 +460,7 @@ nav{
 .box #title{
        font-size: clamp(1.2rem, 3vw, .5rem);
   font-family: 'Medium';
-  color: rgb(122, 159, 247);
+  color:var(--title);
   transition-duration: .3s;
 }
 .box #title:hover{
@@ -436,7 +469,7 @@ nav{
 
 #detail{
        font-size: clamp(1rem, 3vw, .5rem);
-       color: #bebfc0;
+       color:var(--text-color2);
        margin-bottom: 5%;
 }
 
@@ -444,9 +477,12 @@ footer{
   margin-top: 20%;
   padding-top: 5%;
   display: flex;
+  bottom: 0;
   justify-content: space-between;
   width: 100%;
   border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
   flex-wrap: wrap;
 border-top: 4px solid blue;
   border-top-right-radius: 50px;
@@ -517,11 +553,10 @@ footer a{
    
 
 .terminal-window {
-            background: black;
-            border: 1px solid #30363d;
+            background:black;
+            border: 1px solid #748292;
             border-radius: 12px;
             width: 90%;
-            border-top: 2px solid linear-gradient(to right,blue,red);
             margin-top: 10%;
       animation: fex .4s linear 1;
             margin-left: 5%;
@@ -529,7 +564,7 @@ footer a{
             z-index: -1;
             font-family: 'Poppins', Arial, sans-serif;
             max-width: 600px;
-            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
             overflow: hidden;
         }
         
@@ -689,9 +724,21 @@ footer a{
         transform: translateY(0px);
       }
     }
-    #hero{
-      visibility: hidden;
-    }
+ 
+    
+.hero-section{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+.hero-section .links{
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 
       section {
@@ -892,9 +939,9 @@ footer a{
   width: 100%;
   margin-top: 10%;
   display: flex;
-  color: white;
+  color:var(--text-color);
   font-weight: 800;
-  font-size: clamp(1.4rem,2vw,1.4rem);
+  font-size: clamp(1.3rem,2vw,1.3rem);
   margin-left: 9%;
   justify-content: flex-start;
   align-items: center;
