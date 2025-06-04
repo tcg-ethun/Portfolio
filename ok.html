@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smooth Page Animation</title>
+    <title>GSAP ScrollTrigger Animation System</title>
     <style>
         * {
             margin: 0;
@@ -13,213 +13,45 @@
 
         body {
             font-family: 'Arial', sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
+            background: #0a0a0a;
             color: white;
-            opacity: 0;
-            transform: translateY(30px);
-            animation: slideInFade 0.8s ease-out forwards;
+            overflow-x: hidden;
         }
 
-        @keyframes slideInFade {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+      
+   
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
 
-        .header {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-
-        .header h1 {
-            font-size: 3rem;
-            margin-bottom: 20px;
-            font-weight: 700;
-        }
-
-        .header p {
-            font-size: 1.2rem;
-            opacity: 0.9;
-        }
-
-        .content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-bottom: 50px;
-        }
-
-        .card {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border-radius: 15px;
-            padding: 30px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-        }
-
-        .card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-            color: #fff;
-        }
-
-        .card p {
-            line-height: 1.6;
-            opacity: 0.9;
-        }
-
-        .button-container {
-            text-align: center;
-            margin-top: 40px;
-        }
-
-        .refresh-btn {
-            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
-            color: white;
-            border: none;
-            padding: 15px 30px;
-            font-size: 1.1rem;
-            border-radius: 50px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        .refresh-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-        }
-
-        .refresh-btn:active {
-            transform: translateY(0);
-        }
-
-        /* Alternative animation classes */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(30px);
-            animation: slideInFade 1s ease-out forwards;
-        }
-
-        .fade-in-slow {
-            opacity: 0;
-            transform: translateY(30px);
-            animation: slideInFade 1.2s ease-out forwards;
-        }
-
-        .fade-in-fast {
-            opacity: 0;
-            transform: translateY(30px);
-            animation: slideInFade 0.5s ease-out forwards;
-        }
-
+        /* Responsive */
         @media (max-width: 768px) {
-            .header h1 {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .section-title {
                 font-size: 2rem;
             }
             
-            .container {
-                padding: 20px 15px;
-            }
-            
             .card {
-                padding: 20px;
+                min-width: 250px;
             }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <h1>Smooth Page Animation</h1>
-            <p>Page refreshed with beautiful translateY animation</p>
-        </div>
 
-        <div class="content">
-            <div class="card">
-                <h3>🚀 Performance</h3>
-                <p>The animation uses CSS transforms and opacity for smooth 60fps performance. TranslateY ensures hardware acceleration for buttery smooth transitions.</p>
-            </div>
+    <!-- Text Section -->
 
-            <div class="card">
-                <h3>🎨 Customizable</h3>
-                <p>Easy to modify duration, easing, and distance. You can change the translateY value, animation duration, or add different easing functions.</p>
-            </div>
 
-            <div class="card">
-                <h3>📱 Responsive</h3>
-                <p>Works perfectly on all devices and screen sizes. The animation adapts beautifully to mobile, tablet, and desktop viewports.</p>
-            </div>
-        </div>
-
-        <div class="button-container">
-            <button class="refresh-btn" onclick="refreshPage()">Refresh Page</button>
-        </div>
-    </div>
-
+    <!-- GSAP Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script>
-        // Basic page refresh function
-        function refreshPage() {
-            location.reload();
-        }
+ 
 
-        // Optional: Add page transition before refresh
-        function smoothRefresh() {
-            document.body.style.opacity = '0';
-            document.body.style.transform = 'translateY(-30px)';
-            setTimeout(() => {
-                location.reload();
-            }, 300);
-        }
 
-        // Apply animation to dynamically added content
-        function addFadeInAnimation(element, delay = 0) {
-            setTimeout(() => {
-                element.classList.add('fade-in');
-            }, delay);
-        }
 
-        // Example: Apply different animation speeds
-        function applyCustomAnimation(className = 'fade-in') {
-            document.body.className = '';
-            document.body.classList.add(className);
-        }
 
-        // Optional: Detect page load and apply animation
-        window.addEventListener('load', () => {
-            console.log('Page loaded with smooth animation!');
-        });
-
-        // Optional: Add animation to new elements
-        document.addEventListener('DOMContentLoaded', () => {
-            // You can apply animations to specific elements here
-            const cards = document.querySelectorAll('.card');
-            cards.forEach((card, index) => {
-                card.style.animationDelay = `${index * 0.1}s`;
-            });
-        });
-
-        // Keyboard shortcut for refresh (F5 or Ctrl+R)
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'F5' || (e.ctrlKey && e.key === 'r')) {
-                e.preventDefault();
-                smoothRefresh();
-            }
-        });
     </script>
 </body>
 </html>
