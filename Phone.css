@@ -1,3 +1,6 @@
+   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+
 
 * {
       margin: 0;
@@ -7,6 +10,7 @@
 scroll-behavior: smooth;
       user-select: none;
     }
+
 
 @font-face {
   font-family: 'Bold';
@@ -25,13 +29,34 @@ scroll-behavior: smooth;
 #view{
   font-size: 15px;
 }
+.top-head{
+  display: flex;
+  top: 0;
+  justify-content: space-between;
+  align-items: center;
+  height: 3.2rem;
+  position: fixed;
+  backdrop-filter: blur(15px);
+  /* background-color: transparent black; */
+  width: 100%;
+}
+
+.top-head #logo{
+  margin-left: 5%;
+  margin-top: 2%;
+  border-radius: 50px;
+  width: 70px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
 
     .grid-container {
       display: grid;
       grid-template-columns:1fr;
     }
     body {
-      background-color: #05112f ;
+      background-color: #000000 ;
       color: #b6bfd2;
       animation: fade .5s linear 1;
     }
@@ -60,6 +85,8 @@ html{
 }
     .header h1 {
       font-weight: bold;
+      animation: fex .4s linear 1;
+
       margin-top: 10%;
       margin-left: 12%;
        font-size: clamp(2.3rem, 5vw, 2.5rem);
@@ -75,11 +102,16 @@ button{
 button:active{
   transform: scale(.9);
 }
+.header{
+  margin-top: 10%;
+}
     .header h3{
       font-size: 1.2rem;
       width: 80%;
       margin-left: 10%;
       padding: 5px;
+      animation: fex .4s linear 1;
+
   font-family: 'Medium';
       color: #b6bfd2;
       font-weight: normal;
@@ -89,6 +121,8 @@ button:active{
       margin-left: 10%;
       font-size: 1rem;
       line-height: 1.5;
+      animation: fex .4s linear 1;
+
       color: #9fadbc;
       font-family: 'Regular';
       padding: 5px;
@@ -127,10 +161,12 @@ button:active{
   width: 90%;
   display: flex;
   margin-top: 20px;
+      animation: fex .4s linear 1;
   margin-left: 10%;
   column-gap: 15px;
   margin-bottom: 5%;
 }
+
 #hov{
 width: 40px;
 padding: 6px;
@@ -141,6 +177,8 @@ height: 40px;
 border-radius: 50px;
 background-color: rgb(224, 225, 226);
 }
+
+
 img{
   width: 25px;
 }
@@ -177,11 +215,10 @@ p{
 
 /* Menu button */
 .menu-btn {
-  position: fixed;
   top: 15px;
-  right: 15px;  
+  margin-right: 20px;  
   z-index: 11002;
-  font-size: 24px;
+  font-size: 19px;
   background:none;
   border-radius: 50px;
   color: white;
@@ -204,6 +241,7 @@ p{
 .sidebar nav a {
   color: white;
   text-decoration: none;
+      animation: fex .4s linear 1;
   font-size: 18px;
   display: flex;
   justify-content: center;
@@ -216,7 +254,12 @@ p{
   margin: 10px 0;
 }
 .sidebar nav a:active{
+      animation: fex .4s linear 1;
   
+}
+
+nav{
+      animation: fex .4s linear 1;
 }
 .overlay {
   position: fixed;
@@ -243,9 +286,12 @@ p{
   }
 }
 
+#project-top{
+  margin-bottom: 20%;
+}
 #about-top{
   margin-top: 5%;
-  margin-bottom: 5%;
+  margin-bottom: 20%;
 }
 
     .box {
@@ -339,14 +385,17 @@ p{
 }
 
 footer{
-  margin-top: 10%;
+  margin-top: 20%;
+  padding-top: 5%;
   display: flex;
   justify-content: space-between;
   width: 100%;
   border-top-left-radius: 50px;
+  flex-wrap: wrap;
+border-top: 4px solid blue;
   border-top-right-radius: 50px;
   height: 15rem;
-  background-color: black;
+  background-color: rgb(0, 0, 0);
 }
 
 .footer-content-box {
@@ -359,7 +408,7 @@ footer{
   flex-wrap: wrap;
   flex-direction: column;
   margin-left: 5%;
-  background-color: rgb(0, 0, 0);
+
 }
 
 .footer-content-box2{
@@ -372,7 +421,18 @@ footer{
   flex-wrap: wrap;
   flex-direction: column;
   margin-right: 5%;
-  background-color: rgb(0, 0, 0);
+
+}
+
+.footer-content-box3{
+  width: 100%;
+  font-size: clamp(.9rem,2vw,1rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+
 }
 
 .main-link{
@@ -380,7 +440,198 @@ footer{
   color: rgb(216, 198, 249);
 }
 footer a{
-  color: white;
+  color: rgb(187, 187, 187);
   margin-top: 10px;
   font-size:clamp(.9rem,2vw,1.5rem) ;
 }
+
+#last-connect{
+    color: rgb(187, 187, 187);
+  margin-top: 10px;
+  font-size:clamp(.9rem,2vw,1.5rem) ;
+}
+
+
+#hex-top{
+  width: 0px;
+  height: 0px;
+  visibility: none;
+}
+
+   
+
+.terminal-window {
+            background: black;
+            border: 1px solid #30363d;
+            border-radius: 12px;
+            width: 90%;
+            margin-top: 10%;
+      animation: fex .4s linear 1;
+            margin-left: 5%;
+            position: absolute;
+            z-index: -1;
+            font-family: 'Poppins', Arial, sans-serif;
+            max-width: 600px;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+        }
+        
+        .terminal-header {
+            background: linear-gradient(90deg, #21262d 0%, #161b22 100%);
+            padding: 12px 20px;
+            border-bottom: 1px solid #30363d;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .traffic-light {
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
+        }
+        
+        .traffic-light.red {
+            background: linear-gradient(135deg, #ff6b6b, #ff5252);
+        }
+        
+        .traffic-light.yellow {
+            background: linear-gradient(135deg, #ffd93d, #ffb74d);
+        }
+        
+        .traffic-light.green {
+            background: linear-gradient(135deg, #51cf66, #4caf50);
+        }
+        
+        .code-container {
+            padding: 30px;
+            font-size: 16px;
+            line-height: 1.6;
+            letter-spacing: 0.5px;
+        }
+        
+        .code-line {
+            margin-bottom: 4px;
+            position: relative;
+        }
+        
+        .keyword {
+            color: #ff79c6;
+            font-weight: 500;
+        }
+        
+        .variable {
+            color: #8be9fd;
+        }
+        
+        .string {
+            color: #f1fa8c;
+        }
+        
+        .property {
+            color: #50fa7b;
+        }
+        
+        .boolean {
+            color: #bd93f9;
+        }
+        
+        .number {
+            color: #ffb86c;
+        }
+        
+        .operator {
+            color: #ff79c6;
+        }
+        
+        .function {
+            color: #50fa7b;
+        }
+        
+        .this {
+            color: #8be9fd;
+        }
+        
+        .method {
+            color: #e6edf3;
+        }
+        
+        .cursor {
+            display: inline-block;
+            width: 2px;
+            height: 20px;
+            background: #f8f8f2;
+            animation: blink .6s infinite;
+            margin-left: 2px;
+            vertical-align: text-bottom;
+        }
+        
+        @keyframes blink {
+            0%{
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        
+        .indent-1 { margin-left: 40px; }
+        .indent-2 { margin-left: 80px; }
+        .indent-3 { margin-left: 120px; }
+        .indent-4 { margin-left: 160px; }
+        .indent-5 { margin-left: 200px; }
+        
+        /* Subtle glow effects */
+        .terminal-window {
+            position: relative;
+        }
+        
+        .terminal-window::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, #d5d7e0, #7eaff8, #cf9dee, #6ca7ff);
+            border-radius: 14px;
+            z-index: -1;
+            opacity: 0.1;
+            animation: glow 3s ease-in-out infinite alternate;
+        }
+        
+        @keyframes glow {
+            0% { opacity: 0.05; }
+            100% { opacity: 0.15; }
+        }
+        
+        /* Responsive design */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            
+            .code-container {
+                padding: 20px;
+                font-size: 14px;
+            }
+            
+            .indent-1 { margin-left: 20px; }
+            .indent-2 { margin-left: 40px; }
+            .indent-3 { margin-left: 60px; }
+            .indent-4 { margin-left: 80px; }
+            .indent-5 { margin-left: 100px; }
+        }
+
+         @keyframes fex {
+      0%{
+        transform: translateY(10px);
+      }
+      100%{
+        transform: translateY(0px);
+      }
+    }
+    #hero{
+      visibility: hidden;
+    }

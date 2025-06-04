@@ -7,15 +7,28 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <link rel="stylesheet" href="Phone.css">
 <link rel="stylesheet" href="Desktop.css">
+<link rel="shortcut icon" href="logo.png" type="image/x-icon">
 </head>
 <body>
   <div class="grid-container">
 
+    <div class="top-head" id="top-head">
+      <img src="ok.png" alt=""  id="logo">
+
+      <div class="hero-section">
+        <a id="hero" href="#hex-top">Home</a><br/>
+    <a id="hero" href="#about-top">About</a><br/>
+    <a id="hero" href="#project-top">Projects</a>
+    <a id="hero" href="#footer">Footer</a>
+    </div>
     <button id="menuBtn" class="menu-btn">☰ </button>
+     </div>
+
+
 <div id="sidebar" class="sidebar">
   <button id="closeBtn" class="close-btn">&times;</button>
   <nav>
-    <a href="#home">Home</a><br/>
+    <a href="#home-top">Home</a><br/>
     <a href="#about-top">About</a><br/>
     <a href="#project-top">Projects</a><br/>
     <a href="#footer">Footer</a><br/>
@@ -25,10 +38,8 @@
 
 
 
-
+        <div id="home-top"></div> <br>
     <div class="header" id="home">
-
-        
       <h1 id="h1"><font color="white">I'm</font>&nbsp;<span style="color: gold;">Ethun</span></h1>
       <h3>Student Developer <i class="fa-solid fa-code"></i></h3>
       <div class="text">Every bug is a hidden lesson.</div>
@@ -40,8 +51,77 @@
 </div>
     </div>
 
+    
+
 
     <div class="main-content">
+
+<div id="hex-top"></div>
+    <div class="terminal-window" id="hex">
+        <div class="terminal-header">
+            <div class="traffic-light red"></div>
+            <div class="traffic-light yellow"></div>
+            <div class="traffic-light green"></div>
+        </div>
+        
+        <div class="code-container">
+            <div class="code-line">
+                <span class="keyword">const</span> <span class="variable">coder</span> <span class="operator">=</span> <span class="operator">{</span>
+            </div>
+            
+            <div class="code-line indent-1">
+                <span class="property">name</span><span class="operator">:</span> <span class="string">'Ethun_Tcg'</span><span class="operator">,<span class="cursor"></span></span>
+            </div>
+            
+            <div class="code-line indent-1">
+                <span class="property">skills</span><span class="operator">:</span> <span class="operator">[</span><span class="string">'HTML'</span><span class="operator">,</span> <span class="string">'CSS' </span>,<span class="string">'JS'</span>,<span class="string">'C'</span>,<span class="string">'Python'</span><span class="operator">]</span><span class="operator">,</span>
+            </div>
+            
+            <div class="code-line indent-1">
+                <span class="property">hardWorker</span><span class="operator">:</span> <span class="boolean">true</span><span class="operator">,</span>
+            </div>
+            
+            <div class="code-line indent-1">
+                <span class="property">problemSolver</span><span class="operator">:</span> <span class="boolean">true</span><span class="operator">,</span>
+            </div>
+            
+            <div class="code-line indent-1">
+                <span class="property">hireable</span><span class="operator">:</span> <span class="function">function</span><span class="operator">()</span> <span class="operator">{</span>
+            </div>
+            
+            <div class="code-line indent-2">
+                <span class="keyword">return</span> <span class="operator">(</span>
+            </div>
+            
+            <div class="code-line indent-3">
+                <span class="this">this</span><span class="operator">.</span><span class="method">hardWorker</span> <span class="operator">&&</span>
+            </div>
+            
+            <div class="code-line indent-3">
+                <span class="this">this</span><span class="operator">.</span><span class="method">problemSolver</span> <span class="operator">&&</span>
+            </div>
+            
+            <div class="code-line indent-3">
+                <span class="this">this</span><span class="operator">.</span><span class="method">skills</span><span class="operator">.</span><span class="method">length</span> <span class="operator">>=</span> <span class="number">5</span>
+            </div>
+            
+            <div class="code-line indent-2">
+                <span class="operator">)</span><span class="operator">;</span>
+            </div>
+            
+            <div class="code-line indent-1">
+                <span class="operator">}</span>
+            </div>
+            
+            <div class="code-line">
+                <span class="operator">}</span>
+            </div>
+        </div>
+    </div>
+
+
+
+
 
       <div class="about-section">
         <div id="about-top"></div> <br>
@@ -89,11 +169,22 @@
      <footer id="footer">
            <div class="footer-content-box"> 
             <div class="main-link">Main</div>
-             <a href="#home">Home</a>
+             <a href="#home-top">Home</a>
                <a href="#about-top">About</a>
               <a href="#project-top" >Projects</a>
+              <a href="#project-top" >Projects</a>
            </div>
-           <div class="footer-content-box2"></div>
+           <div class="footer-content-box2">
+            <div class="main-link">Connect</div>
+                 <div id="last-connect" onclick="window.location.href='https://github.com/tcg-ethun'"> Github&nbsp; <i class="fa-solid fa-up-right-from-square fa-xs" style="color: #5590f7;"></i></div>
+   <div id="last-connect" onclick="window.location.href='https://leetcode.com/u/V29Chx70Mj/'">Leet Code&nbsp; <i class="fa-solid fa-up-right-from-square fa-xs" style="color: #5590f7;"></i></div>
+   <div id="last-connect"  onclick="window.location.href='https://www.instagram.com/im.esann?igsh=aHRxbjIxMDdleHVv'">Instagram&nbsp;<i class="fa-solid fa-up-right-from-square fa-xs" style="color: #5590f7;"></i></div>
+   <div id="last-connect" onclick="window.location.href='https://www.facebook.com/share/1C47inqxoC/'">Facebook&nbsp;<i class="fa-solid fa-up-right-from-square fa-xs" style="color: #5590f7;"></i></div>
+
+           </div>
+           <div class="footer-content-box3">
+            <div class="finish">&copy; Code With Ethun</div>
+            </div>
     </footer>
       </div>
     </div>
