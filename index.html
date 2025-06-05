@@ -35,9 +35,11 @@
     <a href="#about-top">About</a>
     <a href="#quote">Quote</a>
     <a href="#project-top">Projects</a>
+    <a href="#faq-container">FAQ</a>
     <a href="#footer">Footer</a>
   </nav>
-        <button id="toggleBtn"><i id="themeIcon" class="fas fa-moon"></i></button>
+  <br> <br> 
+        <!-- <button id="toggleBtn"><i id="themeIcon" class="fas fa-moon"></i></button> -->
 
 </div>
 
@@ -46,7 +48,12 @@
 
                              <!-- Header-Section -->
     <div class="header" id="home">
-                 <div class="matrix"> </div>
+        <h1 id="intro" class="animate-fade-up" data-delay=".1" >Master Coding. <br>
+        Build Real <br> projects. Get <br> Ahead.</h1> <br>
+        <p id="intro-p" class="animate-fade-up" data-delay=".2">Hey ! I'm Ethun.Student at Bangladesh Noubahini College Kaptai  || Rangamati || Bangladesh.</p>
+               <br>
+               <div class="Explore animate-fade-up" data-delay=".4"><a href="#quote" id="ex"> Explore &nbsp; <i class="fa-solid fa-arrow-right" style="color: #e5e5e5;"></i> </div></a>
+        <!-- <div class="matrix"> </div>
                   <h1 id="h1">I'm&nbsp;<span id="Ethun">Ethun</span></h1>
                   <h3>Student Developer <i class="fa-solid fa-code"></i></h3>
                   <div class="text">Every bug is a hidden lesson.</div>
@@ -55,7 +62,7 @@
                <div class="leetcode" id="hov" onclick="window.location.href='https://leetcode.com/u/V29Chx70Mj/'"><img src="Image/leetcode.svg" alt=""></div>
                <div class="instagram" id="hov" onclick="window.location.href='https://www.instagram.com/im.esann?igsh=aHRxbjIxMDdleHVv'"> <img src="Image/instagram.svg" alt=""></div>
                <div class="whatsapp" id="hov" onclick="window.location.href='https://www.facebook.com/share/1C47inqxoC/'"><i class="fa-brands fa-facebook-f fa-xl" style="color: #025af2;"></i></div>
-    </div>
+    </div> -->
     </div>
 
     
@@ -170,7 +177,7 @@
       <div class="about-section animate-fade-up" data-delay=".2">
         <div id="about-top animate-fade-up" data-delay=".2"></div> <br>
         <div id="about-top"></div>
-        <h3 id="about animate-fade-up" data-delay=".2">About +</h3>
+        <h3 id="about animate-fade-up" data-delay=".2">About + </h3>
         <p><i class="fa-solid fa-quote-left" style="color: #42a7f5;"></i>&nbsp; 
             I'm a passionate and self-motivated student at Bangladesh Noubahini 
             College with a strong interest in programming and software development. 
@@ -263,61 +270,71 @@
           <div class="box animate-fade-up" data-delay=".2">
               <div id="title" onclick="window.location.href='https://tcg-ethun.github.io/Education/'">1. Education&nbsp; <i id="view" class="fa-solid fa-up-right-from-square" style="color: #6ba7f6;"></i></div>
               <div id="detail">Empowering students with the knowledge and skills to succeed in every step of their journey.</div>
-              <div id="image-section"></div>
+              <!-- <div id="image-section"></div> -->
           </div>
 
           <div class="box animate-fade-up" data-delay=".2">
               <div id="title" onclick="window.location.href='https://tcg-ethun.github.io/AES-256/'">2. File Encryption&nbsp; <i id="view" class="fa-solid fa-up-right-from-square" style="color: #6ba7f6;"></i></div>
               <div id="detail">Advanced Web Application for Secure File Handling with AES-256 Encryption. </div>
-              <div id="image-section2"></div>
+              <!-- <div id="image-section2"></div> -->
           </div>
 
           <div class="box animate-fade-up" data-delay=".2">
               <div id="title" onclick="window.location.href='https://tcg-ethun.github.io/Disc-Rolling/'">3. Rolling Game&nbsp; <i id="view" class="fa-solid fa-up-right-from-square" style="color: #6ba7f6;"></i></div>
               <div id="detail">One Roll Can Change Everything.</div>
-              <div id="image-section3"></div>
+              <!-- <div id="image-section3"></div> -->
           </div>
 
           <div class="box animate-fade-up" data-delay="0.2">
               <div id="title" onclick="window.location.href='https://tcg-ethun.github.io/Gradient-Generator/'"> 4.Gradient Generator &nbsp; <i id="view" class="fa-solid fa-up-right-from-square" style="color: #6ba7f6;"></i></div>
               <div id="detail"> Design Like a Pro – Instantly Generate Customizable Gradient Colors for Any Use. </div>
-              <div id="image-section4"></div>
+              <!-- <div id="image-section4"></div> -->
           </div>
 
           <div class="box animate-fade-up" data-delay="0.2">
               <div id="title" onclick="window.location.href='https://tcg-ethun.github.io/Animate69/'">  5. Photo Gallery &nbsp; <i id="view" class="fa-solid fa-up-right-from-square" style="color: #6ba7f6;"></i></div>
               <div id="detail"> All Photos are made by AI ! How interesting huh !!!!</div>
-              <div id="image-section5"></div>
+              <!-- <div id="image-section5"></div> -->
           </div>
 
-          <div class="quote-section animate-fade-up" data-delay=".2">
-        <div class="go animate-fade-up"  data-delay=".3">  <a href="#home-top">  GO TOP &nbsp;<i class="fa-solid fa-arrow-up fa-fade" style="color: #241de5;"></i> </a> </div>
-          </div>
+      
 
         </div>
       </div>
+<br> <br>
+<div class="faq-section animate-fade-up" data-delay=".3" id="faq-container">
+        <div class="faq-container">
+            <div class="faq-header animate-fade-up " data-delay=".3">
+                <h3  >Faq +</h3>
+            </div>
 
+            <div class="faq-controls animate-fade-up " data-delay=".3">
+                <div id="cat" class="category-btn active" onclick="filterFAQs('Me')">MySelf</div>
+                <div id="cat" class="category-btn" onclick="filterFAQs('education')">Education</div>
+                <div id="cat" class="category-btn" onclick="filterFAQs('programming')">Programming</div>
+            </div>
+            
+            <div class="faq-content animate-fade-up" data-delay=".5" id="faqContent">
+                <!-- FAQs will be loaded here dynamically -->
+            </div>
+        </div>
+    </div>
 
+<br><br> <br> <br><br> <br>
+
+<div class="go">
+    <a href="#home-top" id="nxt">GO TOP &nbsp;<i class="fa-solid fa-arrow-up" style="color: #05146f;"></i></a>
+</div>
                       <!-- Footer Section -->
      <footer id="footer">
-           <div class="footer-content-box"> 
-            <div class="main-link">Main</div>
-             <a href="#home-top">Home</a>
-               <a href="#about-top">About</a>
-              <a href="#quote">Quote</a>
-              <a href="#project-top" >Projects</a>
-           </div>
-           <div class="footer-content-box2">
-            <div class="main-link">Me_On</div>
-                 <div id="last-connect" onclick="window.location.href='https://github.com/tcg-ethun'"> Github&nbsp; <i class="fa-solid fa-up-right-from-square fa-xs" style="color: #5590f7;"></i></div>
-   <div id="last-connect" onclick="window.location.href='https://leetcode.com/u/V29Chx70Mj/'">Leet Code&nbsp; <i class="fa-solid fa-up-right-from-square fa-xs" style="color: #5590f7;"></i></div>
-   <div id="last-connect"  onclick="window.location.href='https://www.instagram.com/im.esann?igsh=aHRxbjIxMDdleHVv'">Instagram&nbsp;<i class="fa-solid fa-up-right-from-square fa-xs" style="color: #5590f7;"></i></div>
-   <div id="last-connect" onclick="window.location.href='https://www.facebook.com/share/1C47inqxoC/'">Facebook&nbsp;<i class="fa-solid fa-up-right-from-square fa-xs" style="color: #5590f7;"></i></div>
-
-           </div>
-           <div class="footer-content-box3">
-            <div class="finish">&copy; Code With Ethun</div>
-            </div>
+           <a href="#home-top"><div class="footer-child" id="code">&copy; Code With Ethun</div></a>  
+             <div class="footer-child" id="social-footer">
+                <div class="github" id="hovx" onclick="window.location.href='https://github.com/tcg-ethun'"> <i class="fa-brands fa-github fa-xl" style="color: #a7a8a9;"></i> </div>
+               <div class="leetcode" id="hovx" onclick="window.location.href='https://leetcode.com/u/V29Chx70Mj/'"> <i class="fa-solid fa-terminal fa-xl"></i></div>
+               <div class="instagram" id="hovx" onclick="window.location.href='https://www.instagram.com/im.esann?igsh=aHRxbjIxMDdleHVv'">  <i class="fa-brands fa-instagram fa-xl" style="color: #a7a8a9;"></i> </div>
+               <div class="whatsapp" id="hovx" onclick="window.location.href='https://www.facebook.com/share/1C47inqxoC/'"><i class="fa-brands fa-facebook-f fa-xl" style="color: #a7a8a9;"></i></div>
+             </div>
+             <div class="footer-child">Terms of Use &nbsp; &nbsp; Privacy Policy</div>
     </footer>
       </div>
     </div>
@@ -326,5 +343,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="Gsap.js"></script>
 <script src="script.js"></script>
+<script src="faq.js"></script>
 </body>
 </html>

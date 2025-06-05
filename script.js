@@ -134,3 +134,4 @@ toggleBtn.addEventListener("click", () => {
   // Update icon
   icon.className = next === "dark" ? "fas fa-moon" : "fas fa-sun";
 });
+
