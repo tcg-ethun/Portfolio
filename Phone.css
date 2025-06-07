@@ -297,6 +297,8 @@ p{
 #intro-p{
 color: var(--text-color2);
 }
+
+
 .sidebar {
   position: fixed;
   top: 0; right: -100%;  
@@ -367,6 +369,7 @@ color: var(--text-color2);
 nav{
       animation: fex .4s linear 1;
 }
+
 .overlay {
   position: fixed;
   top: 0; left: 0; right: 0; bottom: 0;

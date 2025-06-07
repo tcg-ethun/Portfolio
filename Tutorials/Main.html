@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <title>Esan</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="../Phone.css">
+<link rel="stylesheet" href="../Desktop.css">
+<link rel="stylesheet" href="./main.css">
+<link rel="shortcut icon" href="logo.png" type="image/x-icon">
+</head>
+<body>
+
+  <div class="grid-container">
+    <div class="header">
+     <h1 id="tuto" class="animate-fade-up" data-delay=".2">Tutorials</h1>
+    </div>
+    <div class="main-con animate-fade-up" data-delay=".1">
+
+              <div class="tutorial-box animate-fade-up" data-delay=".1">
+                       <div class="floor1"><img src="../Image/html.webp" alt="">
+                                <h4>HTML Tutorial</h4>
+                      </div>
+                       <div class="floor2">
+                        <p id="sub-tuto">Master HTML - The Essential Language Behind Every Web Page and More...</p>
+                       </div>
+                       <div class="floor3">
+                          <div id="btN" onclick="window.location.href='./Html.html'">Start Learning</div>
+                       </div>
+              </div>
+
+              <div class="tutorial-box animate-fade-up" data-delay=".1">
+                           <div class="floor1"><img src="../Image/css.webp" alt="">
+                                <h4>CSS Tutorial</h4>
+                      </div>
+                       <div class="floor2">
+                        <p id="sub-tuto"> Learn CSS the Right Way: Flexbox, Animations, Grid, Transitions and More !....</p>
+                       </div>
+                       <div class="floor3">
+                          <div id="btN" onclick="alertx()">Start Learning</div>
+                       </div>
+              </div>
+
+              <div class="tutorial-box animate-fade-up" data-delay=".1" >
+                       <div class="floor1"><img src="../Image/js.webp" alt="">
+                                <h4>JavaScript Tutorial</h4>
+                      </div>
+                       <div class="floor2">
+                        <p id="sub-tuto">Learn JavaScript and Start Building Interactive, Real-World Projects and more...</p>
+                       </div>
+                       <div class="floor3">
+                          <div id="btN" onclick="alertx()">Start Learning</div>
+                       </div>
+              </div>
+
+              <div class="tutorial-box animate-fade-up" data-delay=".1">
+                                <div class="floor1"><img src="../Image/C.webp" alt="">
+                                <h4>C Tutorial</h4>
+                      </div>
+                       <div class="floor2">
+                        <p id="sub-tuto">Start Coding in C Today – The Mother Language of Modern Programming...</p>
+                       </div>
+                       <div class="floor3">
+                          <div id="btN" onclick="alertx()">Start Learning</div>
+                       </div>
+              </div>
+
+              <div class="tutorial-box animate-fade-up" data-delay=".1">
+                                  <div class="floor1"><img src="../Image/react.webp" alt="">
+                                <h4>React JS Tutorial</h4>
+                      </div>
+                       <div class="floor2">
+                        <p id="sub-tuto">Learn React by Building Projects: Todo App, Calculator, Blog & More....</p>
+                       </div>
+                       <div class="floor3">
+                          <div id="btN" onclick="alertx()">Start Learning</div>
+                       </div>
+              </div>
+
+    </div>
+
+
+
+    <div class="top-head" id="top-head">
+              <!-- Desktop-View-Navigation -->
+      <div class="hero-section">
+        <div class="links">
+     <a id="hero" href="#hex-top">Home</a><br/>
+    <a id="hero" href="#about-top">About</a><br/>
+    <a id="hero" href="#project-top">Projects</a>
+    <a id="hero" href="#footer">Footer</a>
+    </div>
+    <button id="menuBtn" class="menu-btn">☰ </button>
+</div>
+     </div>
+
+                  <!-- Sidebar-Here -->
+<div id="sidebar" class="sidebar">
+  <button id="closeBtn" class="close-btn">&times;</button>
+  <nav>
+    <a href="../index.html#home-top">Home</a>
+    <a href="../index.html#about-top">About</a>
+    <a href="../index.html#quote">Quote</a>
+    <a href="./Main.html">Tutorials</a>
+    <a href="../index.html#project-top">Projects</a>
+    <a href="../index.html#faq-container">FAQ</a>
+    <a href="../index.html#footer">Footer</a>
+    
+  </nav>
+  <br> <br> 
+</div>
+
+<div id="overlay" class="overlay"></div>
+<div id="home-top"></div> <br>
+
+                      <!-- Footer Section -->
+     <footer id="footer">
+           <a href="../index.html"><div class="footer-child" id="code">&copy; Code With Ethun</div></a>  
+             <div class="footer-child" id="social-footer">
+                <div class="github" id="hovx" onclick="window.location.href='https://github.com/tcg-ethun'"> <i class="fa-brands fa-github fa-xl" style="color: #a7a8a9;"></i> </div>
+               <div class="leetcode" id="hovx" onclick="window.location.href='https://leetcode.com/u/V29Chx70Mj/'"> <i class="fa-solid fa-terminal fa-xl"></i></div>
+               <div class="instagram" id="hovx" onclick="window.location.href='https://www.instagram.com/im.esann?igsh=aHRxbjIxMDdleHVv'">  <i class="fa-brands fa-instagram fa-xl" style="color: #a7a8a9;"></i> </div>
+               <div class="whatsapp" id="hovx" onclick="window.location.href='https://www.facebook.com/share/1C47inqxoC/'"><i class="fa-brands fa-facebook-f fa-xl" style="color: #a7a8a9;"></i></div>
+             </div>
+             <div class="footer-child">Terms of Use <br> Privacy Policy</div>
+    </footer>
+    <br> <br>
+
+      </div>
+ 
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="../Gsap.js"></script>
+<script src="../script.js"></script>
+<script src="../faq.js"></script>
+</body>
+</html>

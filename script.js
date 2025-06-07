@@ -135,3 +135,6 @@ toggleBtn.addEventListener("click", () => {
   icon.className = next === "dark" ? "fas fa-moon" : "fas fa-sun";
 });
 
+function alertx(){
+  window.alert("This Tutorial Not Updated !")
+}

@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no">
+    <title>Sidebar Navigation with Sub-links</title>
+    <link rel="stylesheet" href="./main.css">
+    <!-- <link rel="stylesheet" href="../Phone.css"> -->
+</head>
+<body>
+
+    <div class="top-head" id="top-head">
+              <!-- Desktop-View-Navigation -->
+      <div class="hero-section">
+        <div class="links">
+     <a id="hero" href="#hex-top">Home</a><br/>
+    <a id="hero" href="#about-top">About</a><br/>
+    <a id="hero" href="#project-top">Projects</a>
+    <a id="hero" href="#footer">Footer</a>
+    </div>
+    <button id="menuBtn" class="menu-btn">☰ </button>
+</div>
+     </div>
+
+                  <!-- Sidebar-Here -->
+<div id="sidebar" class="sidebar">
+  <button id="closeBtn" class="close-btn">&times;</button>
+  <nav>
+    <a href="../index.html#home-top">Home</a>
+    <a href="../index.html#about-top">About</a>
+    <a href="../index.html#quote">Quote</a>
+    <a href="./Main.html">Tutorials</a>
+    <a href="../index.html#project-top">Projects</a>
+    <a href="../index.html#faq-container">FAQ</a>
+    <a href="../index.html#footer">Footer</a>
+    
+  </nav>
+</div>
+
+
+    <!-- Open button -->
+    <div id="side"> <svg  onclick="openNav()" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-panel-left"><rect width="18" height="18" x="3" y="3" rx="2"></rect><path d="M9 3v18"></path></svg>  &nbsp; &nbsp;Html  Tutorial</div>
+
+    <!-- Sidebar -->
+    <div id="mySidebar" class="sidebar2">
+        <h3 id="head">Html Tutorial</h3>
+        <span class="closebtn" onclick="closeNav()">&times;</span>
+        
+        <!-- Introduction -->
+        <div class="category">
+            <div class="category-header" onclick="toggleCategory('tech')">
+                Introduction
+                <span class="arrow"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-md text-token-text-tertiary"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.29289 9.29289C5.68342 8.90237 6.31658 8.90237 6.70711 9.29289L12 14.5858L17.2929 9.29289C17.6834 8.90237 18.3166 8.90237 18.7071 9.29289C19.0976 9.68342 19.0976 10.3166 18.7071 10.7071L12.7071 16.7071C12.5196 16.8946 12.2652 17 12 17C11.7348 17 11.4804 16.8946 11.2929 16.7071L5.29289 10.7071C4.90237 10.3166 4.90237 9.68342 5.29289 9.29289Z" fill="currentColor"></path></svg></span>
+            </div>
+            <div class="sub-links" id="tech">
+                <a href="#" onclick="showContent('web-dev')">Html Introduction</a>
+                <a href="#" onclick="showContent('working')">Html Working</a>
+                <a href="#" onclick="showContent('install')">Html installation</a>
+                <a href="#" onclick="showContent('execution')">Html Execution</a>
+                <a href="#" onclick="showContent('h-page')">Html page Structure</a>
+                <a href="#" onclick="showContent('tags')">Html Tags</a>
+                <a href="#" onclick="showContent('h-ele')">Html Elements</a>
+                <a href="#" onclick="showContent('htm-at')">Html Attributes</a>
+                <a href="#" onclick="showContent('h-cmnt')">Html Comments</a>
+                <a href="#" onclick="showContent('h-i-c')">Html id & Classes</a>
+            </div>
+        </div>
+
+        <!-- Html Basic Tags -->
+        <div class="category">
+            <div class="category-header" onclick="toggleCategory('business')">
+                Html Basic Tags
+                <span class="arrow"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-md text-token-text-tertiary"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.29289 9.29289C5.68342 8.90237 6.31658 8.90237 6.70711 9.29289L12 14.5858L17.2929 9.29289C17.6834 8.90237 18.3166 8.90237 18.7071 9.29289C19.0976 9.68342 19.0976 10.3166 18.7071 10.7071L12.7071 16.7071C12.5196 16.8946 12.2652 17 12 17C11.7348 17 11.4804 16.8946 11.2929 16.7071L5.29289 10.7071C4.90237 10.3166 4.90237 9.68342 5.29289 9.29289Z" fill="currentColor"></path></svg></span>
+            </div>
+            <div class="sub-links" id="business">
+                <a href="#" onclick="showContent('marketing')">Skeletal Tags</a>
+                <a href="#" onclick="showContent('finance')">Heading Tags</a>
+                <a href="#" onclick="showContent('management')">Paragraph Tag</a>
+                <a href="#" onclick="showContent('entrepreneurship')">Horizontal line Tag</a>
+                <a href="#" onclick="showContent('sales')">Line Break Tag</a>
+                <a href="#" onclick="showContent('sales')">Anchor Tag</a>
+                <a href="#" onclick="showContent('sales')">Image Tag</a>
+                <a href="#" onclick="showContent('sales')">Pre Tag</a>
+            </div>
+        </div>
+
+        <!-- Inline & Block Element-->
+        <div class="category">
+            <div class="category-header" onclick="toggleCategory('design')">
+              Inline & Block Elements
+                <span class="arrow"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-md text-token-text-tertiary"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.29289 9.29289C5.68342 8.90237 6.31658 8.90237 6.70711 9.29289L12 14.5858L17.2929 9.29289C17.6834 8.90237 18.3166 8.90237 18.7071 9.29289C19.0976 9.68342 19.0976 10.3166 18.7071 10.7071L12.7071 16.7071C12.5196 16.8946 12.2652 17 12 17C11.7348 17 11.4804 16.8946 11.2929 16.7071L5.29289 10.7071C4.90237 10.3166 4.90237 9.68342 5.29289 9.29289Z" fill="currentColor"></path></svg></span>
+            </div>
+            <div class="sub-links" id="design">
+                <a href="#" onclick="showContent('ui-ux')">Html inline Element</a>
+                <a href="#" onclick="showContent('graphic')">Html Block Element</a>
+            </div>
+        </div>
+
+        <!-- Html List -->
+        <div class="category">
+            <div class="category-header" onclick="toggleCategory('education')">
+                Html Lists
+                <span class="arrow"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-md text-token-text-tertiary"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.29289 9.29289C5.68342 8.90237 6.31658 8.90237 6.70711 9.29289L12 14.5858L17.2929 9.29289C17.6834 8.90237 18.3166 8.90237 18.7071 9.29289C19.0976 9.68342 19.0976 10.3166 18.7071 10.7071L12.7071 16.7071C12.5196 16.8946 12.2652 17 12 17C11.7348 17 11.4804 16.8946 11.2929 16.7071L5.29289 10.7071C4.90237 10.3166 4.90237 9.68342 5.29289 9.29289Z" fill="currentColor"></path></svg></span>
+            </div>
+            <div class="sub-links" id="education">
+                <a href="#" onclick="showContent('online-courses')">Html List</a>
+                <a href="#" onclick="showContent('tutorials')">Html Unordered List</a>
+                <a href="#" onclick="showContent('certifications')">Html Ordered List</a>
+                <a href="#" onclick="showContent('workshops')">Html Definition List</a>
+            </div>
+        </div>
+
+
+        <!-- Html Tables -->
+        <div class="category">
+            <div class="category-header" onclick="toggleCategory('tables')">
+                Html Tables
+                <span class="arrow"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-md text-token-text-tertiary"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.29289 9.29289C5.68342 8.90237 6.31658 8.90237 6.70711 9.29289L12 14.5858L17.2929 9.29289C17.6834 8.90237 18.3166 8.90237 18.7071 9.29289C19.0976 9.68342 19.0976 10.3166 18.7071 10.7071L12.7071 16.7071C12.5196 16.8946 12.2652 17 12 17C11.7348 17 11.4804 16.8946 11.2929 16.7071L5.29289 10.7071C4.90237 10.3166 4.90237 9.68342 5.29289 9.29289Z" fill="currentColor"></path></svg></span>
+            </div>
+            <div class="sub-links" id="tables">
+                <a href="#" onclick="showContent('online-courses')">Html Tables</a>
+                <a href="#" onclick="showContent('tutorials')">More on Tables</a>
+            </div>
+        </div>
+
+
+
+        <!-- Html Forms -->
+        <div class="category">
+            <div class="category-header" onclick="toggleCategory('forms')">
+                Html Forms
+                <span class="arrow"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-md text-token-text-tertiary"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.29289 9.29289C5.68342 8.90237 6.31658 8.90237 6.70711 9.29289L12 14.5858L17.2929 9.29289C17.6834 8.90237 18.3166 8.90237 18.7071 9.29289C19.0976 9.68342 19.0976 10.3166 18.7071 10.7071L12.7071 16.7071C12.5196 16.8946 12.2652 17 12 17C11.7348 17 11.4804 16.8946 11.2929 16.7071L5.29289 10.7071C4.90237 10.3166 4.90237 9.68342 5.29289 9.29289Z" fill="currentColor"></path></svg></span>
+            </div>
+            <div class="sub-links" id="forms">
+                <a href="#" onclick="showContent('online-courses')">Introduction to Html Forms</a>
+                <a href="#" onclick="showContent('online-courses')">Html Input Forms</a>
+                <a href="#" onclick="showContent('online-courses')">Textarea & Select</a>
+                <a href="#" onclick="showContent('tutorials')">More on Forms</a>
+            </div>
+        </div>
+
+
+        <!-- Head Elements -->
+        <div class="category">
+            <div class="category-header" onclick="toggleCategory('heads')">
+                Head Elements
+                <span class="arrow"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-md text-token-text-tertiary"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.29289 9.29289C5.68342 8.90237 6.31658 8.90237 6.70711 9.29289L12 14.5858L17.2929 9.29289C17.6834 8.90237 18.3166 8.90237 18.7071 9.29289C19.0976 9.68342 19.0976 10.3166 18.7071 10.7071L12.7071 16.7071C12.5196 16.8946 12.2652 17 12 17C11.7348 17 11.4804 16.8946 11.2929 16.7071L5.29289 10.7071C4.90237 10.3166 4.90237 9.68342 5.29289 9.29289Z" fill="currentColor"></path></svg></span>
+            </div>
+            <div class="sub-links" id="heads">
+                <a href="#" onclick="showContent('online-courses')">Html Meta Tags</a>
+                <a href="#" onclick="showContent('online-courses')">Link & Script Tags</a>
+            </div>
+        </div>
+
+
+
+        <!-- Media Tags -->
+        <div class="category">
+            <div class="category-header" onclick="toggleCategory('media')">
+                Head Media
+                <span class="arrow"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-md text-token-text-tertiary"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.29289 9.29289C5.68342 8.90237 6.31658 8.90237 6.70711 9.29289L12 14.5858L17.2929 9.29289C17.6834 8.90237 18.3166 8.90237 18.7071 9.29289C19.0976 9.68342 19.0976 10.3166 18.7071 10.7071L12.7071 16.7071C12.5196 16.8946 12.2652 17 12 17C11.7348 17 11.4804 16.8946 11.2929 16.7071L5.29289 10.7071C4.90237 10.3166 4.90237 9.68342 5.29289 9.29289Z" fill="currentColor"></path></svg></span>
+            </div>
+            <div class="sub-links" id="media">
+                <a href="#" onclick="showContent('online-courses')">Video & Audio Tags</a>
+                <a href="#" onclick="showContent('online-courses')">Svg in Html</a>
+                <a href="#" onclick="showContent('online-courses')">Iframes in Html</a>
+            </div>
+        </div>
+
+
+        <!-- Miscellaneous Tags -->
+        <div class="category">
+            <div class="category-header" onclick="toggleCategory('last')">
+               Miscellaneous Tags
+                <span class="arrow"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-md text-token-text-tertiary"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.29289 9.29289C5.68342 8.90237 6.31658 8.90237 6.70711 9.29289L12 14.5858L17.2929 9.29289C17.6834 8.90237 18.3166 8.90237 18.7071 9.29289C19.0976 9.68342 19.0976 10.3166 18.7071 10.7071L12.7071 16.7071C12.5196 16.8946 12.2652 17 12 17C11.7348 17 11.4804 16.8946 11.2929 16.7071L5.29289 10.7071C4.90237 10.3166 4.90237 9.68342 5.29289 9.29289Z" fill="currentColor"></path></svg></span>
+            </div>
+            <div class="sub-links" id="last">
+                <a href="#" onclick="showContent('online-courses')">Html Code Tag</a>
+                <a href="#" onclick="showContent('online-courses')">Html semantic Tag</a>
+                <a href="#" onclick="showContent('online-courses')">Html Canvas</a>
+                <a href="#" onclick="showContent('online-courses')">Html Global Attributes</a>
+                <a href="#" onclick="showContent('online-courses')">Html Entities</a>
+                <a href="#" onclick="showContent('online-courses')">Html Quotation Tags</a>
+                <a href="#" onclick="showContent('online-courses')">Obsolete Html Tags</a>
+                <a href="#" onclick="showContent('online-courses')">Character Sets</a>
+            </div>
+        </div>
+
+
+<br> <br> <br>
+
+        
+    </div>
+
+    <!-- Main Content -->
+    <div id="main" class="main-content">
+
+
+
+
+        <!--Html Introduction Part -->
+        <div id="web-dev" class="content-section">
+            <h2>Html Introduction &#128640; </h2>
+            <p> আজ আমি আপনাদের জন্য একটি HTML টিউটোরিয়ালটি লিখছি  , 
+                যা আপনাকে ৩০ দিনের কম সময়ে HTML শেখাতে সহায়তা করবে। 
+                আপনার শিক্ষাগত  যোগ্যতার উপর ভিত্তি করে HTML শেখার একটি প্রস্তাবিত 
+                সময়সূচি নিচে দেওয়া হলো: 
+                <br> <br> </p>
+                <ul>
+                    <li>বিদ্যালয় পর্যায়ের শিক্ষার্থী : প্রায় ২৫ দিন | </li>
+                    <li>উচ্চ বিদ্যালয় পাশ করা শিক্ষার্থী : প্রায় ২০ দিন |</li>
+                    <li> কলেজ ও বিশ্ববিদ্যালয় পর্যায়ের শিক্ষার্থী : প্রায় ১০ থেকে ২০ দিন |</li>
+                </ul> <br> <br>
+               <p> আপনি হয়তো ভাবছেন আমি কেন এই সময়সীমা নিয়ে কথা বলছি। 
+                এটা আমার জন্য গুরুত্বপূর্ণ, কারণ আমি চাই আপনি শেখার যাত্রা শুরু করার 
+                আগে আপনার প্রত্যাশাগুলো সঠিকভাবে নির্ধারণ করতে পারেন।
+           </p>
+           <br>
+           <p>  চলুন তাহলে HTML-এ ঝাঁপিয়ে পড়া যাক ! &#128515;</p> <br> <br>
+
+       <h2>Html কি ? &#129300; </h2>
+       <p>
+এইচটিএমএল (HTML) বা হাইপারটেক্সট মার্কআপ ল্যাঙ্গুয়েজ ( Hypertext Markup Language ) হলো 
+এমন একটি ভাষা যা ওয়েবসাইট তৈরির জন্য ব্যবহৃত হয়। 
+এটি টিম বার্নার্স-লি ১৯৯১ সালে তৈরি করেন । এইচটিএমএল মূলত একটি মার্কআপ ভাষা, 
+যার মাধ্যমে ওয়েব পেজে লেখার ধরন, শিরোনাম, ছবি, লিংক ইত্যাদি কীভাবে দেখানো হবে—তা নির্ধারণ
+ করা হয়।
+       </p> <br>
+       <h4>সংক্ষেপে বললে 🕦 :</h4>
+       <ul>
+        <li>  এইচটিএমএল হলো ওয়েব ভাষা, যার মাধ্যমে ওয়েবসাইট তৈরি করা হয়।</li>
+        <li>এটি ওয়েব পেজের মৌলিক গঠন বা বিন্যাস নির্ধারণ করে।</li>
+        <li>এইচটিএমএল-এ একগুচ্ছ "ট্যাগ" থাকে, যা একটি HTML ডকুমেন্টে লিখতে সাহায্য করে 
+            এবং এই ধরনের ফাইল সাধারণত .html বা .htm File এক্সটেনশন দ্বারা সংরক্ষণ করা হয়।</li>
+        <li>এইচটিএমএলের একাধিক সংস্করণ আছে, যার মধ্যে HTML5 হলো সর্বশেষ ও আধুনিক সংস্করণ।</li>
+       </ul> <br> <br>
+           <h2> HTML এর বৈশিষ্ট্যসমূহ 🧬 :  </h2>
+           <br>
+       <ul>
+              <li>এটি  Platform-Independent : উদাহরণস্বরূপ, গুগল ক্রোম ব্রাউজারে উইন্ডোজে
+                 একটি ওয়েবপেজ যেমনভাবে  দেখা যায়, ঠিক তেমনিভাবে ম্যাক 
+                 বা লিনাক্সেও একদম একইভাবে দেখা যায়।</li> <br>
+              <li>ওয়েবপেজে ছবি, ভিডিও ও অডিও যোগ করা যায়: যেমন ইউটিউব তাদের ওয়েবসাইটে ভিডিও দেখায়।</li>
+       <br>       <li>এইচটিএমএল একটি মার্কআপ ভাষা, প্রোগ্রামিং ভাষা নয় : অর্থাৎ , 
+                এটি নির্দেশনা দেয় কীভাবে ওয়েব কনটেন্ট উপস্থাপন করতে হবে, কিন্তু 
+                এটি লজিক বা গাণিতিক হিসাব করে না।</li> <br>
+              <li>এটি অন্যান্য ভাষার সঙ্গে একত্রে কাজ করতে পারে : 
+                যেমন CSS, JavaScript ইত্যাদির সঙ্গে মিলিয়ে ইন্টারঅ্যাকটিভ 
+                বা গতিশীল (dynamic) ওয়েবপেজ তৈরি করা যায়।</li> <br>
+       </ul> <br>
+
+       <h2> কেনো এর নাম HyperText & Markup Language ? &#129300; </h2>
+       <ul>
+        <li>"হাইপারটেক্সট" বলতে বোঝায় এমন লেখা বা টেক্সট, যা অন্য কোনো ডকুমেন্ট বা ওয়েবপেজের সঙ্গে সংযুক্ত থাকে (যেমন লিংক বা হাইপারলিংক)। </li> <br>
+        <li>"মার্কআপ ভাষা" বলতে বোঝায় এমন একটি ভাষা, যেখানে নির্দিষ্ট কিছু ট্যাগ বা চিহ্ন ব্যবহার করে কনটেন্ট কেমনভাবে দেখানো হবে তা নির্ধারণ করা হয়।</li>
+<br>
+
+         <p>তাই, এইচটিএমএল হলো একটি পদ্ধতি যার মাধ্যমে টেক্সট, ছবি, 
+            অডিও, ভিডিও ইত্যাদি নির্দিষ্টভাবে উপস্থাপন করা হয়, এবং এর জন্য
+             বিশেষ ট্যাগ ব্যবহার করা হয়।</p>
+
+    </ul> <br>
+    Note :  🗒️ </br> 
+    <div class="note">ট্যাগ হলো অর্থবোধক শব্দ বা চিহ্ন, যেগুলো &lt;...&gt; কৌণিক বন্ধনীর মধ্যে লেখা হয়। যেমন: &lt;P&gt;
+(প্যারাগ্রাফের জন্য)। প্রতিটি ট্যাগের নিজস্ব অর্থ ও গুরুত্ব রয়েছে, যা ওয়েবপেজে বিভিন্নভাবে প্রভাব ফেলে।</div>
+       <br>
+       <!-- <h2>A beautiful analogy to understand HTML, CSS, and JavaScript : </h2> <br> -->
+
+       <img src=" " alt="">
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+        <div id="working" class="content-section">
+            <h2>Html Working</h2>
+
+        </div>
+
+        <div id="install" class="content-section">
+            <h2>Html installation</h2>
+
+        </div>
+
+        <div id="execution" class="content-section">
+            <h2>Html Execution</h2>
+
+        </div>
+
+        <div id="h-page" class="content-section">
+            <h2>Html Page</h2>
+
+        </div>
+
+        <div id="tags" class="content-section">
+            <h2>Html Tags</h2>
+
+        </div>
+
+        <div id="h-ele" class="content-section">
+            <h2>Html Elements</h2>
+
+        </div>
+
+        <div id="htm-at" class="content-section">
+            <h2>Html Attribute</h2>
+
+        </div>
+
+        <div id="h-cmnt" class="content-section">
+            <h2>Html Comments</h2>
+
+        </div>
+
+
+        <div id="h-i-c" class="content-section">
+            <h2>Html id & Classes</h2>
+
+        </div>
+
+
+
+<script>
+      
+ const links = document.querySelectorAll('.sidebar2 a');
+
+// Initialize from localStorage on page load
+document.addEventListener('DOMContentLoaded', function() {
+    loadSidebarState();
+});
+
+function openNav() {
+    document.getElementById("mySidebar").classList.add("open");
+    document.getElementById("overlay").classList.add("active");
+    document.getElementById("main").classList.add("shifted");
+    saveSidebarState();
+}
+
+function closeNav() {
+    document.getElementById("mySidebar").classList.remove("open");
+    document.getElementById("overlay").classList.remove("active");
+    document.getElementById("main").classList.remove("shifted");
+    saveSidebarState();
+}
+
+function toggleCategory(categoryId) {
+    const category = document.getElementById(categoryId);
+    const header = category.previousElementSibling;
+    
+    // Close all other categories
+    const allCategories = document.querySelectorAll('.sub-links');
+    const allHeaders = document.querySelectorAll('.category-header');
+    
+    allCategories.forEach(cat => {
+        if (cat.id !== categoryId) {
+            cat.classList.remove('open');
+        }
+    });
+    
+    allHeaders.forEach(head => {
+        if (head !== header) {
+            head.classList.remove('active');
+        }
+    });
+    
+    // Toggle current category
+    category.classList.toggle('open');
+    header.classList.toggle('active');
+    
+    // Save state to localStorage
+    saveCategoryStates();
+}
+
+function showContent(contentId) {
+    // Hide all content sections
+    const allSections = document.querySelectorAll('.content-section');
+    allSections.forEach(section => {
+        section.classList.remove('active');
+    });
+    
+    // Show selected content
+    document.getElementById(contentId).classList.add('active');
+    
+    // Save active content to localStorage
+    localStorage.setItem('activeContent', contentId);
+    
+    // Close sidebar on mobile after selection
+    if (window.innerWidth <= 768) {
+        closeNav();
+    }
+}
+
+// Save sidebar open/closed state
+function saveSidebarState() {
+    const sidebar = document.getElementById("mySidebar");
+    const isOpen = sidebar.classList.contains("open");
+    localStorage.setItem('sidebarOpen', JSON.stringify(isOpen));
+}
+
+// Save which categories are expanded
+function saveCategoryStates() {
+    const categoryStates = {};
+    const categories = ['intro', 'business', 'design', 'education','tables','forms','head','media','last'];
+    
+    categories.forEach(categoryId => {
+        const category = document.getElementById(categoryId);
+        const isOpen = category.classList.contains('open');
+        categoryStates[categoryId] = isOpen;
+    });
+    
+    localStorage.setItem('categoryStates', JSON.stringify(categoryStates));
+}
+
+// Load all saved states from localStorage
+function loadSidebarState() {
+    // Load sidebar open/closed state
+    const sidebarOpen = JSON.parse(localStorage.getItem('sidebarOpen'));
+    if (sidebarOpen === true) {
+        document.getElementById("mySidebar").classList.add("open");
+        document.getElementById("overlay").classList.add("active");
+        document.getElementById("main").classList.add("shifted");
+    }
+    
+    // Load category states
+    const categoryStates = JSON.parse(localStorage.getItem('categoryStates'));
+    if (categoryStates) {
+        Object.keys(categoryStates).forEach(categoryId => {
+            if (categoryStates[categoryId]) {
+                const category = document.getElementById(categoryId);
+                const header = category.previousElementSibling;
+                category.classList.add('open');
+                header.classList.add('active');
+            }
+        });
+    }
+    
+    // Load active content
+    const activeContent = localStorage.getItem('activeContent');
+    if (activeContent) {
+        // Hide all content sections first
+        const allSections = document.querySelectorAll('.content-section');
+        allSections.forEach(section => {
+            section.classList.remove('active');
+        });
+        
+        // Show the saved active content
+        const contentElement = document.getElementById(activeContent);
+        if (contentElement) {
+            contentElement.classList.add('active');
+        }
+    }
+}
+
+// Clear all localStorage data (optional function)
+function clearSidebarStorage() {
+    localStorage.removeItem('sidebarOpen');
+    localStorage.removeItem('categoryStates');
+    localStorage.removeItem('activeContent');
+}
+
+// Close sidebar when clicking outside on mobile
+document.addEventListener('click', function(event) {
+    const sidebar = document.getElementById('mySidebar');
+    const openBtn = document.querySelector('.open-btn');
+    
+    if (window.innerWidth <= 768 && 
+        !sidebar.contains(event.target) && 
+        !openBtn.contains(event.target) && 
+        sidebar.classList.contains('open')) {
+        closeNav();
+    }
+});
+
+// Handle window resize
+window.addEventListener('resize', function() {
+    if (window.innerWidth > 768) {
+        document.getElementById("overlay").classList.remove("active");
+    }
+});
+
+
+links.forEach(link => {
+    link.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        links.forEach(l => l.classList.remove('selected')); 
+        this.classList.add('selected');
+
+        localStorage.setItem('selectedLink', this.textContent.trim());
+    });
+
+    // Restore selected link on reload
+    const savedLink = localStorage.getItem('selectedLink');
+    if (link.textContent.trim() === savedLink) {
+        link.classList.add('selected');
+    }
+});
+
+
+    </script>
+
+    <script src="../script.js"></script>
+</body>
+</html>
