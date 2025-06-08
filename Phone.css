@@ -325,12 +325,13 @@ color: var(--text-color2);
   justify-content: center;
   align-items: center;
   height:40px;
-  margin-right: 30px;
+  margin-left: 70%;
+  position:absolute;
   width: 40%;
-  z-index: 11002;
+  z-index: 100000;
   font-size: 19px;
   color: var(--text-color);
-  background: none;
+  background-color:transparent;
   border-radius: 50px;
   border: none;
 }
@@ -707,9 +708,10 @@ visibility: hidden;
   color: white;
 }
 .hero-section .links{
-  width: 70%;
+  width: 40%;
+  margin-left: 27%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
 }
 
@@ -1184,3 +1186,15 @@ background-color:var(--bg-color);
           align-items: center;
           color: rgb(209, 208, 208);
         }
+
+  .explore{
+    width: 260px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    border-radius: 50px;
+    color: black;
+    font-size: 15px;
+    background-color: rgb(255, 255, 255);
+  }

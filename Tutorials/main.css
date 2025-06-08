@@ -1,13 +1,16 @@
 
-   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
-
 * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-       font-family: 'Poppins', Arial, sans-serif;
+            font-family: 'bn';
 scroll-behavior: smooth;
       user-select: none;
+    }
+
+    @font-face {
+        font-family: 'bn';
+        src: url(../HindSiliguri-Regular.ttf);
     }
 
     body{
@@ -280,11 +283,39 @@ align-items: center;
     justify-content: center;
     align-items: center;
     background-color: rgb(205, 168, 2);
-    border-radius: 15px;
+    border-radius: 5px;
     margin-top: 5px;
     color: black;
 }
+#imc{
+    border-radius: 6px;
+    margin-left: 5%;
+}
+svg{
+    transition-duration: .2s;
+}
+svg:active{
+    transform: scale(.9);
+}
 
+h4{
+    width: 100%;
+    font-weight: normal;
+    display: flex;
+    justify-content: flex-start;
+    font-weight: bold;
+    align-items: center;
+    margin-top: 5px;
+}
+
+#exp{
+    width: 100%;
+    font-weight: normal;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    margin-top: 5px;
+}
         .content-section p,ul {
             font-size: clamp(.9rem,1vw,.9rem);
             line-height: 1.6;
@@ -422,3 +453,57 @@ align-items: center;
   margin: 10px 0;
 }
 
+p{
+        font-family: 'bn';
+}
+
+li{
+        font-family: 'bn';
+}
+
+.nxt-button-section{
+    display: flex;
+    width: 90%;
+    margin-top: 30px;
+    align-items: center;
+    margin-bottom: 30px;
+    justify-content: flex-end;
+    column-gap: 60px;
+}
+#head-line{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#next{
+    width: 120px;
+    font-size: clamp(1.0rem,2vw,1.1rem);
+    height: 40px;
+    background-color: rgb(26, 193, 248);
+    border: none;
+    border-radius: 5px;
+    transition-duration: .2s;
+}
+
+#next:active{
+    transform: scale(.9);
+}
+
+#pre{
+    width: 100px;
+    height: 38px;
+    border-radius: 5px;
+    color: rgb(229, 229, 229);
+    background: transparent;
+    border: 2px solid rgb(140, 139, 139);
+}
+
+#a{
+    text-decoration: none;
+    color: rgb(187, 187, 226);
+}
+
+#uls{
+    margin-left: 20px;
+}
